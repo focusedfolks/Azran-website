@@ -9,6 +9,7 @@ import {
   useSpring,
   useTransform,
   type MotionValue,
+  type TargetAndTransition,
 } from "motion/react";
 import useMeasure from "react-use-measure";
 
@@ -132,10 +133,10 @@ function CharSlot({ char, charKey, effect, countingUp }: CharSlotProps) {
   const v = CHAR_VARIANTS[effect];
   const initial =
     typeof v.initial === "function" ? v.initial(countingUp) : v.initial;
-  const exit =
+  const exit: TargetAndTransition =
     "exit" in v && typeof v.exit === "function"
-      ? (v.exit as (up: boolean) => object)(countingUp)
-      : (v.exit as object);
+      ? (v.exit as (up: boolean) => TargetAndTransition)(countingUp)
+      : (v.exit as TargetAndTransition);
 
   return (
     <span
@@ -150,6 +151,7 @@ function CharSlot({ char, charKey, effect, countingUp }: CharSlotProps) {
           key={charKey}
           initial={initial}
           animate={v.animate}
+          exit={exit}
           transition={v.transition as object}
           style={{ display: "inline-block" }}
         >
@@ -260,7 +262,6 @@ function CountUp({
 
   if (digitEffect === "slide") {
     const targetStr = formatValue(direction === "down" ? from : to);
-    const digits: number[] = [];
     const structure: Array<{
       type: "digit" | "sep";
       char?: string;

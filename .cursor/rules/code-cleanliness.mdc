@@ -1,0 +1,41 @@
+---
+description: Code cleanliness, TypeScript/ESLint build discipline, and copied-component review.
+alwaysApply: true
+---
+
+# Code cleanliness
+
+- Never leave unused variables, imports, function parameters, or destructured props.
+- Delete unused values. Do not prefix with `_`, comment them out, or disable lint to hide them.
+- Only destructure props you actually use.
+- Before finishing, re-scan the diff for anything declared but never referenced.
+
+# Build is the definition of done
+
+- This project builds with `npm run build` (Next.js + TypeScript + ESLint). ESLint errors fail production builds on Vercel.
+- Treat `@typescript-eslint/no-unused-vars`, `no-undef`, TypeScript errors, and other lint/type errors as build-breaking bugs.
+- Do not call a feature finished if it would fail `npm run build`. If the change is untested against the build, say so explicitly.
+
+# Third-party / copied components
+
+- Do not paste library snippets (smoothui, unlumen-ui, shadcn, etc.) wholesale.
+- Strip unused props, imports, and dead variables as part of integrating them.
+- Keep only what this project actually uses.
+
+# TypeScript / Next.js
+
+- Prefer deleting dead code over `eslint-disable`. Use a disable only with a genuine, stated reason.
+- Keep types accurate. Do not use `any` to bypass type errors.
+- Do not add new npm dependencies unless the task requires them, and flag it when you do.
+
+```tsx
+// BAD
+function Card({ title, unused }: { title: string; unused: string }) {
+  return <h3>{title}</h3>;
+}
+
+// GOOD
+function Card({ title }: { title: string }) {
+  return <h3>{title}</h3>;
+}
+```

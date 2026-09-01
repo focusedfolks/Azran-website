@@ -129,7 +129,6 @@ export interface ReviewsCarouselProps {
   autoPlayInterval?: number;
   className?: string;
   excludeIds?: (string | number)[];
-  height?: string;
   reviews: Review[];
   showIndicators?: boolean;
   showNavigation?: boolean;
@@ -138,7 +137,6 @@ export interface ReviewsCarouselProps {
 export default function ReviewsCarousel({
   reviews,
   className = "",
-  height = "300px",
   excludeIds = [],
   showIndicators = true,
   showNavigation = true,
