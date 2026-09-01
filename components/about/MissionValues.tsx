@@ -37,7 +37,7 @@ export function MissionValues() {
       <Stagger className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
         {CARDS.map((card) => (
           <StaggerItem key={card.id}>
-            <article className="h-full bg-white p-7 shadow-subtle">
+            <article className="h-full bg-offwhite p-7 shadow-subtle">
               <span className="text-gold">{valueIcons[card.id]}</span>
               <h3 className="mt-5 font-heading text-xl font-bold text-navy">
                 {card.title}

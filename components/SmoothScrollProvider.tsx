@@ -8,7 +8,7 @@ type SmoothScrollProviderProps = {
   children: ReactNode;
 };
 
-const easing = (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t));
+const easing = (t: number) => 1 - Math.pow(1 - t, 4);
 
 export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
   useEffect(() => {
@@ -35,7 +35,7 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
       if (motionQuery.matches) return;
 
       lenis = new Lenis({
-        duration: 0.9,
+        duration: 1.5,
         easing,
         smoothWheel: true,
         autoRaf: false,

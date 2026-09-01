@@ -1,27 +1,44 @@
 "use client";
 
+import { createContext, useContext, type ReactNode } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
 
-const EASE: [number, number, number, number] = [0, 0, 0.2, 1];
-const DURATION = 0.32;
+const DEFAULT_EASE: [number, number, number, number] = [0, 0, 0.2, 1];
+const DEFAULT_DURATION = 0.32;
 const DISTANCE = 20;
+const DEFAULT_STAGGER = 0.09;
 
-export const staggerContainer: Variants = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.09 },
-  },
+const HOME_EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const HOME_DURATION = 0.7;
+const HOME_STAGGER = 0.14;
+
+type MotionTiming = {
+  duration: number;
+  ease: [number, number, number, number];
+  stagger: number;
 };
 
-export const staggerItem: Variants = {
-  hidden: { opacity: 0, y: DISTANCE },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: DURATION, ease: EASE },
-  },
+const DEFAULT_TIMING: MotionTiming = {
+  duration: DEFAULT_DURATION,
+  ease: DEFAULT_EASE,
+  stagger: DEFAULT_STAGGER,
 };
+
+const HOME_TIMING: MotionTiming = {
+  duration: HOME_DURATION,
+  ease: HOME_EASE,
+  stagger: HOME_STAGGER,
+};
+
+const MotionTimingContext = createContext<MotionTiming>(DEFAULT_TIMING);
+
+export function HomeRevealScope({ children }: { children: ReactNode }) {
+  return (
+    <MotionTimingContext.Provider value={HOME_TIMING}>
+      {children}
+    </MotionTimingContext.Provider>
+  );
+}
 
 type RevealProps = {
   children: ReactNode;
@@ -31,6 +48,7 @@ type RevealProps = {
 
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const reduce = useReducedMotion();
+  const { duration, ease } = useContext(MotionTimingContext);
 
   if (reduce) {
     return <div className={className}>{children}</div>;
@@ -42,7 +60,7 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
       initial={{ opacity: 0, y: DISTANCE }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: DURATION, delay, ease: EASE }}
+      transition={{ duration, delay, ease }}
     >
       {children}
     </motion.div>
@@ -56,10 +74,18 @@ type StaggerProps = {
 
 export function Stagger({ children, className }: StaggerProps) {
   const reduce = useReducedMotion();
+  const { stagger } = useContext(MotionTimingContext);
 
   if (reduce) {
     return <div className={className}>{children}</div>;
   }
+
+  const variants: Variants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: stagger },
+    },
+  };
 
   return (
     <motion.div
@@ -67,7 +93,7 @@ export function Stagger({ children, className }: StaggerProps) {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.12 }}
-      variants={staggerContainer}
+      variants={variants}
     >
       {children}
     </motion.div>
@@ -76,13 +102,23 @@ export function Stagger({ children, className }: StaggerProps) {
 
 export function StaggerItem({ children, className }: StaggerProps) {
   const reduce = useReducedMotion();
+  const { duration, ease } = useContext(MotionTimingContext);
 
   if (reduce) {
     return <div className={className}>{children}</div>;
   }
 
+  const variants: Variants = {
+    hidden: { opacity: 0, y: DISTANCE },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration, ease },
+    },
+  };
+
   return (
-    <motion.div className={className} variants={staggerItem}>
+    <motion.div className={className} variants={variants}>
       {children}
     </motion.div>
   );

@@ -62,9 +62,9 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 overflow-visible border-b border-navy/10 bg-offwhite">
+    <header className="sticky top-0 z-40 overflow-visible border-b border-navy/10 bg-white">
       <div className="mx-auto flex h-[72px] w-full max-w-content items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo />
+        <Logo priority />
 
         <MotionNavigationMenu
           key={pathname}
@@ -141,7 +141,7 @@ export function Navbar() {
         aria-label="Mobile navigation"
         {...(!open ? { inert: true } : {})}
         className={cn(
-          "fixed inset-y-0 right-0 z-[60] flex w-[min(100%,20rem)] flex-col bg-offwhite shadow-subtle transition-transform duration-200 ease-out lg:hidden",
+          "fixed inset-y-0 right-0 z-[60] flex w-[min(100%,20rem)] flex-col bg-white shadow-subtle transition-transform duration-200 ease-out lg:hidden",
           open ? "translate-x-0" : "pointer-events-none translate-x-full",
         )}
       >

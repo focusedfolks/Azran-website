@@ -162,15 +162,30 @@ export const certIcons: Record<string, ReactNode> = {
       <path d="M9 8h6M9 12h6M9 16h3" />
     </LineIcon>
   ),
-  insurance: (
+  legal: (
     <LineIcon>
-      <path d="M12 3 5 6v6c0 5 3.2 8.4 7 9.5 3.8-1.1 7-4.5 7-9.5V6l-7-3z" />
+      <path d="M8 8V6a4 4 0 0 1 8 0v2" />
+      <path d="M5 8h14v12H5z" />
+      <path d="M12 12v4" />
     </LineIcon>
   ),
-  iso: (
+  authority: (
     <LineIcon>
       <circle cx="12" cy="12" r="8" />
-      <path d="M8 12h8M12 8v8" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 4v2M12 18v2M4 12h2M18 12h2" />
+    </LineIcon>
+  ),
+  register: (
+    <LineIcon>
+      <path d="M8 4h9a2 2 0 0 1 2 2v14H8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+      <path d="M10 9h6M10 13h6M10 17h3" />
+    </LineIcon>
+  ),
+  chamber: (
+    <LineIcon>
+      <path d="M3 20h18M5 20V10l7-5 7 5v10" />
+      <path d="M9 20v-6h6v6" />
     </LineIcon>
   ),
 };

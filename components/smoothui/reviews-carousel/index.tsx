@@ -61,7 +61,7 @@ function ReviewCard({
           ease: [0, 0, 0.2, 1],
         },
       }}
-      className="absolute left-1/2 top-1/2 w-[min(100%,36rem)] border-2 border-navy bg-white p-6 shadow-subtle sm:p-8"
+      className="absolute left-1/2 top-1/2 w-[min(100%,36rem)] border-2 border-navy bg-offwhite p-6 shadow-subtle sm:p-8"
       initial={false}
       style={{
         filter: `blur(${blur}px)`,
@@ -110,7 +110,7 @@ function NavigationButton({
     <button
       aria-label={direction === "prev" ? "Previous review" : "Next review"}
       className={cn(
-        "group relative z-0 flex h-11 w-11 items-center justify-center border border-navy/15 bg-white text-navy transition-colors duration-200",
+        "group relative z-0 flex h-11 w-11 items-center justify-center border border-navy/15 bg-white text-navy transition-colors duration-300 ease-out",
         disabled
           ? "cursor-not-allowed opacity-30"
           : "cursor-pointer hover:border-navy hover:bg-navy hover:text-offwhite",
@@ -252,7 +252,7 @@ export default function ReviewsCarousel({
                 <button
                   aria-label={`Show testimonial ${index + 1}`}
                   className={cn(
-                    "h-2 rounded-sm transition-all duration-200",
+                    "h-2 rounded-sm transition-all duration-300 ease-out",
                     index === activeIndex
                       ? "w-8 bg-gold"
                       : "w-2 bg-navy/20 hover:bg-navy/40",

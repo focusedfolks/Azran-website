@@ -29,7 +29,7 @@ export function ServiceOverview() {
               <Link
                 href={`/services#${service.anchor}`}
                 className={cn(
-                  "group flex h-full cursor-pointer flex-col overflow-hidden border border-navy/10 bg-white transition-[transform,box-shadow] duration-200 ease-out",
+                  "group flex h-full cursor-pointer flex-col overflow-hidden border border-navy/10 bg-offwhite transition-[transform,box-shadow] duration-300 ease-out",
                   service.featured
                     ? "border-l-4 border-l-gold shadow-md hover:-translate-y-1.5 hover:shadow-lg"
                     : "shadow-subtle hover:-translate-y-1 hover:shadow-lg",
@@ -61,7 +61,7 @@ export function ServiceOverview() {
                   )}
                 >
                   <div className="flex items-start justify-between gap-3">
-                    <span className="text-navy transition-colors duration-[250ms] ease-out group-hover:text-gold">
+                    <span className="text-navy transition-colors duration-300 ease-out group-hover:text-gold">
                       {serviceIcons[service.slug]}
                     </span>
                     {service.featured ? (

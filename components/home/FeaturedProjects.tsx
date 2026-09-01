@@ -12,7 +12,11 @@ export function FeaturedProjects() {
     <Section className="bg-offwhite">
       <Reveal className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <SectionHeading eyebrow="Selected work" heading="Recent Projects" />
-        <Button href="/projects" variant="secondary" className="hidden sm:inline-flex">
+        <Button
+          href="/projects"
+          variant="secondary"
+          className="hidden duration-300 ease-out sm:inline-flex"
+        >
           View All Projects
         </Button>
       </Reveal>
@@ -38,7 +42,11 @@ export function FeaturedProjects() {
       </Stagger>
 
       <div className="mt-8 sm:hidden">
-        <Button href="/projects" variant="secondary" className="w-full">
+        <Button
+          href="/projects"
+          variant="secondary"
+          className="w-full duration-300 ease-out"
+        >
           View All Projects
         </Button>
       </div>

@@ -233,7 +233,7 @@ export function Hero() {
             </motion.div>
           </AnimatePresence>
           <p className="mt-8 text-sm tracking-wide text-offwhite/65">
-            Licensed &amp; Insured · 10+ Years Experience · Serving UAE
+            DED Licensed · 10+ Years Experience · Serving UAE
           </p>
         </div>
 
@@ -293,7 +293,7 @@ export function Hero() {
                 aria-selected={slideIndex === index}
                 aria-label={`Show ${item.eyebrow} slide`}
                 className={cn(
-                  "h-2 cursor-pointer rounded-sm transition-colors duration-200",
+                  "h-2 cursor-pointer rounded-sm transition-colors duration-300 ease-out",
                   slideIndex === index
                     ? "w-8 bg-gold"
                     : "w-2 bg-offwhite/35 hover:bg-offwhite/60",
@@ -313,7 +313,7 @@ function HeroButton({ cta }: { cta: HeroCta }) {
     <Button
       href={cta.href}
       variant={cta.variant}
-      className={cta.icon ? "gap-2.5" : undefined}
+      className={cta.icon ? "gap-2.5 duration-300 ease-out" : "duration-300 ease-out"}
       {...(cta.external
         ? { target: "_blank", rel: "noopener noreferrer" }
         : {})}

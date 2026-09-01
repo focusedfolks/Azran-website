@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="border-t border-gold/50 bg-navy text-offwhite">
       <div className="mx-auto grid w-full max-w-content gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8 lg:py-20">
         <div className="max-w-sm">
-          <Logo imageClassName="h-16 w-auto sm:h-20" />
+          <Logo tone="onDark" imageClassName="h-14 w-auto sm:h-16" />
           <p className="mt-5 text-sm leading-relaxed text-offwhite/75">
             {SITE.tagline}
           </p>
@@ -82,7 +82,8 @@ export function Footer() {
       <div className="border-t border-gold/50">
         <div className="mx-auto flex w-full max-w-content flex-col items-start justify-between gap-2 px-4 py-5 sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <p className="text-xs text-offwhite/60">
-            © {year} {SITE.name}. All rights reserved.
+            © {year} {SITE.name}. DED License No. {SITE.license.number}. All
+            rights reserved.
           </p>
           <p className="text-xs text-offwhite/60">
             Designed by Focused Folks

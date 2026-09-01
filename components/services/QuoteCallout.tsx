@@ -5,7 +5,7 @@ import { WhatsAppGlyph } from "@/components/icons";
 export function QuoteCallout() {
   // Pricing not published — service scope varies too much for fixed rates, and publishing invites competitor undercutting. Confirm with client if they want a starting-from range instead.
   return (
-    <div className="border-2 border-gold bg-white px-6 py-8 sm:px-10 sm:py-10">
+    <div className="border-2 border-gold bg-offwhite px-6 py-8 sm:px-10 sm:py-10">
       <h3 className="font-heading text-2xl font-extrabold text-navy">
         Request a Custom Quote
       </h3>

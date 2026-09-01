@@ -35,7 +35,7 @@ export function OtherServices() {
               <StaggerItem key={service.slug}>
                 <article
                   id={service.anchor}
-                  className="group scroll-mt-36 h-full overflow-hidden border border-navy/10 bg-white transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lg"
+                  className="group scroll-mt-36 h-full overflow-hidden border border-navy/10 bg-offwhite transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lg"
                 >
                   {photo ? (
                     <div className="relative aspect-[4/3] bg-navy">

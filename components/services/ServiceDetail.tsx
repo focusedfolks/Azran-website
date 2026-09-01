@@ -38,7 +38,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <div className="bg-white px-5 py-8 sm:px-8 sm:py-10">
+          <div className="border border-navy/10 bg-offwhite px-5 py-8 shadow-subtle sm:px-8 sm:py-10">
             <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
               Our Process
             </h3>
@@ -66,7 +66,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
           <Stagger className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {content.materials.map((item) => (
               <StaggerItem key={item.title}>
-                <div className="flex items-start gap-3 border border-navy/10 bg-white p-4">
+                <div className="flex items-start gap-3 border border-navy/10 bg-offwhite p-4">
                   <span className="text-gold">{markIcons[item.icon]}</span>
                   <p className="text-sm font-medium text-navy">{item.title}</p>
                 </div>
@@ -82,7 +82,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
           <Stagger className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {content.types.map((type) => (
               <StaggerItem key={type.title}>
-                <article className="h-full overflow-hidden border border-navy/10 bg-white shadow-subtle">
+                <article className="h-full overflow-hidden border border-navy/10 bg-offwhite shadow-subtle">
                   {type.image ? (
                     <div className="relative aspect-[4/3] bg-navy">
                       <Image

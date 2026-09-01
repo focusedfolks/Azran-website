@@ -129,7 +129,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="flex h-full flex-col border border-navy/10 bg-white p-6 sm:p-8">
+    <div className="flex h-full flex-col border border-navy/10 bg-offwhite p-6 sm:p-8">
       <SectionHeading eyebrow="Enquire" heading="Send a Message" />
 
       <form

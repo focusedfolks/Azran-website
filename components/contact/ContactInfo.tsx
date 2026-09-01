@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function ContactInfo() {
   return (
-    <div className="flex h-full flex-col border border-navy/10 bg-white p-6 sm:p-8">
+    <div className="flex h-full flex-col border border-navy/10 bg-offwhite p-6 sm:p-8">
       <SectionHeading eyebrow="Reach us" heading="Contact Info" />
 
       <ul className="mt-8 space-y-6">

@@ -18,8 +18,10 @@ export function FinalCta() {
           Let&apos;s talk about how we can help.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button href="/contact">Get a Quote</Button>
-          <Button href="/contact" variant="inverse">
+          <Button href="/contact" className="duration-300 ease-out">
+            Get a Quote
+          </Button>
+          <Button href="/contact" variant="inverse" className="duration-300 ease-out">
             Contact Us
           </Button>
         </div>

@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         navy: "#0D182A",
         gold: "#D4AF37",
-        gray: "#6C757D",
-        offwhite: "#F8F9FA",
+        gray: "#656C74",
+        offwhite: "#F7F1E3",
       },
       fontFamily: {
         heading: ["var(--font-heading)", "Montserrat", "sans-serif"],

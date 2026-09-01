@@ -16,7 +16,43 @@ export const SITE = {
     sunday: "Sunday · Closed",
   },
   employees: 1000,
+  license: {
+    number: "1644444",
+    legalType: "Limited Liability Company (LLC)",
+    issuingAuthority:
+      "Dubai Department of Economic Development (DED)",
+    registerNo: "2908508",
+    dcciNo: "697756",
+  },
 } as const;
+
+export const LICENSE_ITEMS = [
+  {
+    id: "license",
+    title: "Trade License",
+    detail: SITE.license.number,
+  },
+  {
+    id: "legal",
+    title: "Legal Type",
+    detail: SITE.license.legalType,
+  },
+  {
+    id: "authority",
+    title: "Issuing Authority",
+    detail: SITE.license.issuingAuthority,
+  },
+  {
+    id: "register",
+    title: "Register No",
+    detail: SITE.license.registerNo,
+  },
+  {
+    id: "chamber",
+    title: "DCCI No",
+    detail: SITE.license.dcciNo,
+  },
+] as const;
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
