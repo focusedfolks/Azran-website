@@ -2,26 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html.lenis,
+  html.lenis body {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-offwhite text-navy font-body font-normal antialiased;
+  }
+
+  h1,
+  h2 {
+    @apply font-heading font-extrabold tracking-tight text-navy;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold tracking-tight text-navy;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-navy focus:px-4 focus:py-2 focus:text-offwhite focus:outline-none;
+  }
+
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center px-6 py-3 text-sm font-heading font-bold tracking-wide transition-all duration-200 ease-out rounded-sm;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .btn-primary {
+    @apply btn bg-gold text-navy shadow-subtle;
+    @apply hover:-translate-y-0.5 hover:shadow-md;
+    @apply active:translate-y-0 active:shadow-subtle;
+    @apply focus-visible:outline-navy;
+  }
+
+  .btn-secondary {
+    @apply btn border border-navy bg-transparent text-navy shadow-none;
+    @apply hover:-translate-y-0.5 hover:bg-navy hover:text-offwhite hover:shadow-md;
+    @apply active:translate-y-0 active:shadow-none;
+    @apply focus-visible:outline-navy;
+  }
+
+  .btn-inverse {
+    @apply btn border border-offwhite bg-transparent text-offwhite shadow-none;
+    @apply hover:-translate-y-0.5 hover:bg-offwhite hover:text-navy hover:shadow-md;
+    @apply active:translate-y-0 active:shadow-none;
+    @apply focus-visible:outline-gold;
+  }
+
+  .btn:disabled {
+    @apply pointer-events-none translate-y-0 opacity-60 shadow-subtle;
+  }
+
+  .whatsapp-float {
+    right: 1.5rem;
+    bottom: max(1.5rem, env(safe-area-inset-bottom, 0px));
+  }
+
+  .form-label {
+    @apply mb-1.5 block text-sm font-medium text-navy;
+  }
+
+  .form-control {
+    @apply w-full rounded-sm border border-navy/20 bg-white px-4 py-3 text-base text-navy transition-colors duration-200;
+    min-height: 44px;
+  }
+
+  .form-control:focus {
+    @apply border-navy outline-none;
+  }
+
+  .form-control[aria-invalid="true"] {
+    @apply border-navy;
+    box-shadow: inset 0 0 0 1px #0d182a;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

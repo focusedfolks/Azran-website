@@ -1,0 +1,18 @@
+---
+description: Append this photography style to every image generation prompt for Azran site photos.
+alwaysApply: true
+---
+
+# Azran photography style
+
+When generating or replacing any photograph for this site, append the following style block to the end of every image prompt. Do not paraphrase it away.
+
+Photorealistic documentary-style photography, natural daylight, slightly desaturated professional color grade, shallow depth of field, shot on a full-frame camera at f/2.8-f/4, UAE commercial/residential interior setting, clean modern architecture in background, navy-blue workwear/uniform on any technicians shown, no visible text or logos, no exaggerated or stylized rendering — must look like real editorial trade photography, not illustration or CGI.
+
+## Constraints
+
+- Do not generate illustration, CGI, cinematic color, neon, or stock-looking poses.
+- Do not render readable text, brand marks, or logos in the frame.
+- Technicians wear navy workwear only.
+- Prefer UAE interiors: villas, lobbies, kitchens, bathrooms, commercial fit-outs.
+- Generate images only when the user asks for photos or named assets.
