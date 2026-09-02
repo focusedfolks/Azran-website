@@ -130,7 +130,7 @@ export function ContactForm() {
 
   return (
     <div className="flex h-full flex-col border border-navy/10 bg-offwhite p-6 sm:p-8">
-      <SectionHeading eyebrow="Enquire" heading="Send a Message" />
+      <SectionHeading eyebrow="Enquire" heading="Send a message" />
 
       <form
         className="mt-8 flex flex-1 flex-col gap-5"
@@ -139,7 +139,7 @@ export function ContactForm() {
       >
         <div>
           <label htmlFor="contact-name" className="form-label">
-            Full Name
+            Full name
           </label>
           <input
             id="contact-name"
@@ -161,7 +161,7 @@ export function ContactForm() {
 
         <div>
           <label htmlFor="contact-phone" className="form-label">
-            Phone Number
+            Phone number
           </label>
           <input
             id="contact-phone"
@@ -206,7 +206,7 @@ export function ContactForm() {
 
         <div>
           <label htmlFor="contact-service" className="form-label">
-            Service Interested In
+            Service of interest
           </label>
           <select
             id="contact-service"
@@ -255,7 +255,7 @@ export function ContactForm() {
             role="status"
             className={`border px-4 py-3 text-sm ${
               status === "success"
-                ? "border-gold bg-gold/10 text-navy"
+                ? "border-gold-500 bg-gold-400/10 text-navy"
                 : "border-navy/20 bg-offwhite text-navy"
             }`}
           >

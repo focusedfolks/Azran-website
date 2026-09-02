@@ -32,7 +32,7 @@ export function ProjectsGallery() {
   return (
     <Section className="bg-offwhite">
       <Reveal>
-        <SectionHeading eyebrow="Our work" heading="Selected Projects" />
+        <SectionHeading eyebrow="Our work" heading="Selected projects" />
 
         <div
           className="mt-10 flex flex-wrap gap-2"
@@ -50,7 +50,7 @@ export function ProjectsGallery() {
                 className={cn(
                   "relative min-h-11 cursor-pointer px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-200",
                   isActive
-                    ? "bg-gold text-navy after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-navy"
+                    ? "bg-gold-400 text-navy hover:bg-gold-300 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-navy"
                     : "bg-white text-gray hover:text-navy",
                 )}
                 onClick={() => setFilter(item.id)}
@@ -90,13 +90,13 @@ export function ProjectsGallery() {
                     />
                     <div className="absolute inset-0 bg-navy/0 transition-colors duration-300 ease-out group-hover:bg-navy/40 max-lg:bg-navy/40" />
                     <div className="absolute inset-x-0 bottom-0 translate-y-3 p-4 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 max-lg:translate-y-0 max-lg:opacity-100">
-                      <span className="mb-2 inline-block bg-gold px-2 py-0.5 font-heading text-[0.65rem] font-bold uppercase tracking-[0.14em] text-navy">
+                      <span className="mb-2 inline-block bg-gold-400 px-2 py-0.5 font-heading text-[0.65rem] font-bold uppercase tracking-[0.14em] text-navy">
                         {project.categoryLabel}
                       </span>
                       <h2 className="font-heading text-base font-bold text-offwhite">
                         {project.title}
                       </h2>
-                      <span className="mt-2 block font-heading text-xs font-bold uppercase tracking-[0.16em] text-gold">
+                      <span className="mt-2 block font-heading text-xs font-bold text-gold-400">
                         View Details
                       </span>
                     </div>

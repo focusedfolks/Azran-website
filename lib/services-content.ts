@@ -50,12 +50,12 @@ export const TILING_CONTENT: ServiceDetailContent = {
   ],
   process: [
     {
-      title: "Site Assessment",
+      title: "Site assessment",
       body: "[PLACEHOLDER] Survey levels, substrate condition, and access before work starts.",
       icon: "assess",
     },
     {
-      title: "Material Selection",
+      title: "Material selection",
       body: "[PLACEHOLDER] Agree tile type, format, and layout with the client.",
       icon: "select",
     },
@@ -70,12 +70,12 @@ export const TILING_CONTENT: ServiceDetailContent = {
       icon: "install",
     },
     {
-      title: "Quality Check",
+      title: "Quality check",
       body: "[PLACEHOLDER] Inspect alignment, grout, and cleanliness before handover.",
       icon: "check",
     },
   ],
-  materialsTitle: "Materials & Tools We Use",
+  materialsTitle: "Materials & tools we use",
   materials: [
     { title: "[PLACEHOLDER] Porcelain & ceramic tiles", icon: "tile" },
     { title: "[PLACEHOLDER] Adhesives & primers", icon: "adhesive" },
@@ -84,40 +84,40 @@ export const TILING_CONTENT: ServiceDetailContent = {
     { title: "[PLACEHOLDER] Levels & setting-out tools", icon: "level" },
     { title: "[PLACEHOLDER] Protection & finishing kit", icon: "check" },
   ],
-  typesTitle: "Types of Tiling We Offer",
+  typesTitle: "Types of tiling we offer",
   types: [
     {
-      title: "Floor Tiling",
+      title: "Floor tiling",
       body: "[PLACEHOLDER] Internal floors in living, lobby, and circulation areas.",
       image: "/images/services-tiling-floor.jpg",
       imageAlt: "Large-format grey porcelain floor tiles in an open-plan living area",
     },
     {
-      title: "Wall Tiling",
+      title: "Wall tiling",
       body: "[PLACEHOLDER] Feature and wet-area walls with aligned joints.",
       image: "/images/services-tiling-wall.jpg",
-      imageAlt: "Technician setting wall tiles on a kitchen backsplash",
+      imageAlt: "Technician setting wall tiles on a kitchen splashback",
     },
     {
-      title: "Bathroom Tiling",
+      title: "Bathroom tiling",
       body: "[PLACEHOLDER] Floors, walls, and wet-room detailing.",
       image: "/images/services-tiling-bathroom.jpg",
       imageAlt: "Partially completed bathroom mosaic floor with a grout float",
     },
     {
-      title: "Kitchen Tiling",
+      title: "Kitchen tiling",
       body: "[PLACEHOLDER] Splashbacks and kitchen floor finishes.",
       image: "/images/services-tiling-kitchen.png",
       imageAlt: "Technician setting porcelain tiles on a villa kitchen splashback",
     },
     {
-      title: "Outdoor Tiling",
+      title: "Outdoor tiling",
       body: "[PLACEHOLDER] Terraces and external areas using suitable materials.",
       image: "/images/services-tiling-outdoor.jpg",
       imageAlt: "Natural stone-look tiles being laid on a UAE villa patio",
     },
     {
-      title: "Commercial Interiors",
+      title: "Commercial interiors",
       body: "[PLACEHOLDER] High-traffic lobby and workplace tiling.",
       image: "/images/services-tiling-commercial.png",
       imageAlt: "Technician checking tile alignment on a commercial lobby floor",
@@ -172,7 +172,7 @@ export const CLEANING_CONTENT: ServiceDetailContent = {
       icon: "assess",
     },
     {
-      title: "Equipment Setup",
+      title: "Equipment setup",
       body: "[PLACEHOLDER] Bring in the right machines, chemicals, and protection.",
       icon: "equipment",
     },
@@ -182,7 +182,7 @@ export const CLEANING_CONTENT: ServiceDetailContent = {
       icon: "clean",
     },
     {
-      title: "Quality Inspection",
+      title: "Quality inspection",
       body: "[PLACEHOLDER] Check against the scope before the client walk-round.",
       icon: "inspect",
     },
@@ -192,7 +192,7 @@ export const CLEANING_CONTENT: ServiceDetailContent = {
       icon: "handover",
     },
   ],
-  materialsTitle: "Equipment & Products We Use",
+  materialsTitle: "Equipment & products we use",
   materials: [
     { title: "[PLACEHOLDER] Scrubber-dryers", icon: "machine" },
     { title: "[PLACEHOLDER] Industrial vacuums", icon: "vacuum" },
@@ -201,7 +201,7 @@ export const CLEANING_CONTENT: ServiceDetailContent = {
     { title: "[PLACEHOLDER] Glass & cloth kits", icon: "cloth" },
     { title: "[PLACEHOLDER] Inspection checklist", icon: "check" },
   ],
-  typesTitle: "Types of Cleaning We Offer",
+  typesTitle: "Types of cleaning we offer",
   types: [
     {
       title: "Residential",
@@ -216,25 +216,25 @@ export const CLEANING_CONTENT: ServiceDetailContent = {
       imageAlt: "Technician using a floor scrubber in a commercial office lobby",
     },
     {
-      title: "Post-Construction",
+      title: "Post-construction",
       body: "[PLACEHOLDER] Dust, debris, and fit-out residue after works.",
       image: "/images/services-cleaning-postconstruction.jpg",
       imageAlt: "Gloved hands wiping construction dust from a window pane",
     },
     {
-      title: "Deep Cleaning",
+      title: "Deep cleaning",
       body: "[PLACEHOLDER] Periodic deep clean of high-use spaces.",
       image: "/images/services-cleaning-deep.jpg",
       imageAlt: "Technician steam-cleaning upholstery with a handheld extractor",
     },
     {
-      title: "Facade & Glass",
+      title: "Facade & glass",
       body: "[PLACEHOLDER] External and internal glazing where in scope.",
       image: "/images/services-cleaning-facade.png",
-      imageAlt: "Technician cleaning a tall glass facade panel in a lobby",
+      imageAlt: "Technician cleaning a tall glass façade panel in a lobby",
     },
     {
-      title: "Common Areas",
+      title: "Common areas",
       body: "[PLACEHOLDER] Corridors, stairs, and shared facilities.",
       image: "/images/services-cleaning-common.png",
       imageAlt: "Technician mopping a tiled apartment corridor and stair landing",

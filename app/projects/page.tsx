@@ -10,9 +10,9 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHeader
-        title="Our Projects"
+        title="Our projects"
         image="/images/header-projects.png"
-        imageAlt="Completed lobby with mixed floor and wall tile"
+        imageAlt="Completed lobby with mixed floor and wall tiles"
         crumbs={[
           { href: "/", label: "Home" },
           { label: "Projects" },

@@ -98,7 +98,7 @@ export function ComparisonSlider({
       </span>
 
       <motion.div
-        className="absolute top-0 z-10 h-full w-0.5 bg-gold"
+        className="absolute top-0 z-10 h-full w-0.5 bg-gold-500"
         style={{ left: `${value}%` }}
         aria-hidden="true"
       />
@@ -106,7 +106,7 @@ export function ComparisonSlider({
       <button
         type="button"
         className={cn(
-          "absolute top-1/2 z-20 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center border-2 border-gold bg-navy text-gold transition-transform duration-200 ease-out hover:scale-110 active:scale-110 group-hover:scale-110",
+          "absolute top-1/2 z-20 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center border-2 border-gold-500 bg-navy text-gold-400 transition-transform duration-200 ease-out hover:scale-110 active:scale-110 group-hover:scale-110",
         )}
         style={{ left: `${value}%` }}
         aria-label="Compare before and after"

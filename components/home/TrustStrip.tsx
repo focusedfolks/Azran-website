@@ -19,7 +19,7 @@ export function TrustStrip() {
               key={item.id}
               className="flex w-44 shrink-0 flex-col items-center text-center"
             >
-              <span className="text-gold">{trustIcons[item.id]}</span>
+              <span className="text-gold-400">{trustIcons[item.id]}</span>
               <p className="mt-3 text-sm font-medium leading-snug text-offwhite">
                 {item.label}
               </p>

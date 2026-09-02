@@ -1,8 +1,15 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
 import { WhatsAppGlyph } from "@/components/icons";
@@ -42,7 +49,7 @@ const SLIDES: HeroSlide[] = [
     eyebrow: "Floor tiling",
     heading: "Precision floors.",
     headingAccent: "Built to last.",
-    body: "Large-format porcelain and stone-look floors for villas, lobbies, and circulation — set out, bedded, and grouted to a clean line.",
+    body: "Large-format porcelain and stone-look floors for villas, lobbies, and circulation areas — set out, bedded, and grouted to a clean line.",
     images: [
       {
         src: "/images/hero-slide-floor-1.png",
@@ -75,7 +82,7 @@ const SLIDES: HeroSlide[] = [
     eyebrow: "Wall tiling",
     heading: "Walls, aligned.",
     headingAccent: "Joint by joint.",
-    body: "Feature walls, splashbacks, and wet-area tiling with consistent joints and a tidy finish — from setting-out to grout.",
+    body: "Feature walls, splashbacks, and wet-area tiling with consistent joints and a tidy finish — from setting-out to grouting.",
     images: [
       {
         src: "/images/hero-slide-wall-1.png",
@@ -172,13 +179,25 @@ const SLIDES: HeroSlide[] = [
 ];
 
 const INTERVAL_MS = 3000;
-const EASE: [number, number, number, number] = [0, 0, 0.2, 1];
+const SLIDE_EASE: [number, number, number, number] = [0, 0, 0.2, 1];
+const LINE_EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const LINE_DURATION = 0.5;
+const LINE_STAGGER = 0.08;
+const BODY_DELAY = LINE_STAGGER * 4;
+const CTA_DELAY = BODY_DELAY + 0.2;
 
 export function Hero() {
   const reduce = useReducedMotion();
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const total = SLIDES.length;
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const yMain = useTransform(scrollYProgress, [0, 1], [0, 24]);
+  const ySide = useTransform(scrollYProgress, [0, 1], [0, 30]);
 
   const goTo = useCallback(
     (next: number) => {
@@ -201,6 +220,7 @@ export function Hero() {
 
   return (
     <section
+      ref={heroRef}
       className="relative overflow-hidden bg-navy text-offwhite"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -210,30 +230,57 @@ export function Hero() {
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.id}
-              initial={reduce ? false : { opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={reduce ? undefined : { opacity: 0, y: -12 }}
-              transition={{ duration: 0.32, ease: EASE }}
+              initial={false}
+              animate={{ opacity: 1 }}
+              exit={reduce ? undefined : { opacity: 0 }}
+              transition={{ duration: reduce ? 0 : 0.32, ease: SLIDE_EASE }}
             >
-              <p className="font-body text-xs font-medium uppercase tracking-[0.22em] text-gold">
+              <HeroLine
+                as="p"
+                delay={0}
+                reduce={reduce}
+                className="font-body text-xs font-medium uppercase tracking-[0.22em] text-gold-400"
+              >
                 {slide.eyebrow}
-              </p>
+              </HeroLine>
               <h1 className="mt-3 max-w-xl font-heading text-hero-mobile font-extrabold text-offwhite lg:text-hero">
-                {slide.heading}
-                <br />
-                <span className="text-gold">{slide.headingAccent}</span>
+                <HeroLine as="span" delay={LINE_STAGGER} reduce={reduce}>
+                  {slide.heading}
+                </HeroLine>
+                <HeroLine
+                  as="span"
+                  delay={LINE_STAGGER * 2}
+                  reduce={reduce}
+                  className="text-gold-400"
+                >
+                  {slide.headingAccent}
+                </HeroLine>
               </h1>
-              <p className="mt-6 max-w-lg text-base font-normal leading-relaxed text-offwhite/80 sm:text-lg">
+              <HeroLine
+                as="p"
+                delay={BODY_DELAY}
+                reduce={reduce}
+                className="mt-6 max-w-lg text-base font-normal leading-relaxed text-offwhite sm:text-lg"
+              >
                 {slide.body}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              </HeroLine>
+              <motion.div
+                className="mt-8 flex flex-wrap gap-3"
+                initial={reduce ? false : { opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: reduce ? 0 : 0.4,
+                  delay: reduce ? 0 : CTA_DELAY,
+                  ease: LINE_EASE,
+                }}
+              >
                 <HeroButton cta={slide.primary} />
                 <HeroButton cta={slide.secondary} />
-              </div>
+              </motion.div>
             </motion.div>
           </AnimatePresence>
           <p className="mt-8 text-sm tracking-wide text-offwhite/65">
-            DED Licensed · 10+ Years Experience · Serving UAE
+            DED licensed · 10+ years of experience · Serving the UAE
           </p>
         </div>
 
@@ -246,36 +293,30 @@ export function Hero() {
                 initial={reduce ? false : { opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={reduce ? undefined : { opacity: 0 }}
-                transition={{ duration: 0.32, ease: EASE }}
+                transition={{ duration: 0.32, ease: SLIDE_EASE }}
               >
-                <div className="relative row-span-2">
-                  <Image
-                    src={slide.images[0].src}
-                    alt={slide.images[0].alt}
-                    fill
-                    priority={index === 0}
-                    sizes="(max-width: 1024px) 50vw, 28vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative">
-                  <Image
-                    src={slide.images[1].src}
-                    alt={slide.images[1].alt}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 22vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative">
-                  <Image
-                    src={slide.images[2].src}
-                    alt={slide.images[2].alt}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 22vw"
-                    className="object-cover"
-                  />
-                </div>
+                <HeroCollageCell
+                  image={slide.images[0]}
+                  y={yMain}
+                  reduce={Boolean(reduce)}
+                  priority={index === 0}
+                  sizes="(max-width: 1024px) 50vw, 28vw"
+                  className="relative row-span-2 overflow-hidden"
+                />
+                <HeroCollageCell
+                  image={slide.images[1]}
+                  y={ySide}
+                  reduce={Boolean(reduce)}
+                  sizes="(max-width: 1024px) 50vw, 22vw"
+                  className="relative overflow-hidden"
+                />
+                <HeroCollageCell
+                  image={slide.images[2]}
+                  y={ySide}
+                  reduce={Boolean(reduce)}
+                  sizes="(max-width: 1024px) 50vw, 22vw"
+                  className="relative overflow-hidden"
+                />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -295,7 +336,7 @@ export function Hero() {
                 className={cn(
                   "h-2 cursor-pointer rounded-sm transition-colors duration-300 ease-out",
                   slideIndex === index
-                    ? "w-8 bg-gold"
+                    ? "w-8 bg-gold-400"
                     : "w-2 bg-offwhite/35 hover:bg-offwhite/60",
                 )}
                 onClick={() => goTo(slideIndex)}
@@ -308,12 +349,81 @@ export function Hero() {
   );
 }
 
+function HeroLine({
+  as: Tag,
+  children,
+  delay,
+  reduce,
+  className,
+}: {
+  as: "p" | "span";
+  children: string;
+  delay: number;
+  reduce: boolean | null;
+  className?: string;
+}) {
+  const MotionTag = Tag === "p" ? motion.p : motion.span;
+
+  if (reduce) {
+    return (
+      <Tag className={cn(Tag === "span" && "block", className)}>{children}</Tag>
+    );
+  }
+
+  return (
+    <MotionTag
+      className={cn(Tag === "span" && "block", className)}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: LINE_DURATION, delay, ease: LINE_EASE }}
+    >
+      {children}
+    </MotionTag>
+  );
+}
+
+function HeroCollageCell({
+  image,
+  y,
+  reduce,
+  priority,
+  sizes,
+  className,
+}: {
+  image: CollageImage;
+  y: MotionValue<number>;
+  reduce: boolean;
+  priority?: boolean;
+  sizes: string;
+  className: string;
+}) {
+  return (
+    <div className={className}>
+      <motion.div
+        className="absolute -inset-y-8 inset-x-0"
+        style={reduce ? undefined : { y }}
+      >
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          priority={priority}
+          sizes={sizes}
+          className="object-cover"
+        />
+      </motion.div>
+    </div>
+  );
+}
+
 function HeroButton({ cta }: { cta: HeroCta }) {
   return (
     <Button
       href={cta.href}
       variant={cta.variant}
-      className={cta.icon ? "gap-2.5 duration-300 ease-out" : "duration-300 ease-out"}
+      className={
+        cta.icon ? "gap-2.5 duration-300 ease-out" : "duration-300 ease-out"
+      }
       {...(cta.external
         ? { target: "_blank", rel: "noopener noreferrer" }
         : {})}

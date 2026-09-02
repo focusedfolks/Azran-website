@@ -11,7 +11,7 @@ export function FeaturedProjects() {
   return (
     <Section className="bg-offwhite">
       <Reveal className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-        <SectionHeading eyebrow="Selected work" heading="Recent Projects" />
+        <SectionHeading eyebrow="Selected work" heading="Recent projects" />
         <Button
           href="/projects"
           variant="secondary"

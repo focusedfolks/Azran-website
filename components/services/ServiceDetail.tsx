@@ -7,6 +7,7 @@ import { ComparisonSlider } from "@/components/ui/ComparisonSlider";
 import { QuoteCallout } from "@/components/services/QuoteCallout";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { asServiceHeading } from "@/lib/heading";
 import { cn } from "@/lib/cn";
 import type { ServiceDetailContent } from "@/lib/services-content";
 
@@ -27,10 +28,10 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         <Reveal>
           <SectionHeading
             eyebrow={content.kicker}
-            heading={content.title}
+            heading={asServiceHeading(content.title)}
             icon={serviceIcons[content.iconKey]}
           />
-          <div className="mt-6 max-w-3xl space-y-3 text-base font-normal leading-relaxed text-gray sm:text-lg">
+          <div className="mt-6 max-w-3xl space-y-3 text-base font-normal leading-relaxed text-navy sm:text-lg">
             {content.overview.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -40,19 +41,19 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         <Reveal className="mt-14 md:mt-16">
           <div className="border border-navy/10 bg-offwhite px-5 py-8 shadow-subtle sm:px-8 sm:py-10">
             <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
-              Our Process
+              Our process
             </h3>
             <ol className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {content.process.map((step, index) => (
                 <li key={step.title}>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold font-heading text-sm font-extrabold text-gold">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold-500 font-heading text-sm font-extrabold text-gold-400">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="mt-4 block text-navy">{markIcons[step.icon]}</span>
                   <h4 className="mt-3 font-heading text-base font-bold text-navy">
                     {step.title}
                   </h4>
-                  <p className="mt-2 text-sm leading-relaxed text-gray">{step.body}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-navy">{step.body}</p>
                 </li>
               ))}
             </ol>
@@ -60,14 +61,14 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <h3 className="font-heading text-xl font-bold sm:text-2xl">
+          <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
             {content.materialsTitle}
           </h3>
           <Stagger className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {content.materials.map((item) => (
               <StaggerItem key={item.title}>
                 <div className="flex items-start gap-3 border border-navy/10 bg-offwhite p-4">
-                  <span className="text-gold">{markIcons[item.icon]}</span>
+                  <span className="text-navy">{markIcons[item.icon]}</span>
                   <p className="text-sm font-medium text-navy">{item.title}</p>
                 </div>
               </StaggerItem>
@@ -76,7 +77,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <h3 className="font-heading text-xl font-bold sm:text-2xl">
+          <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
             {content.typesTitle}
           </h3>
           <Stagger className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -98,7 +99,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
                     <h4 className="font-heading text-lg font-bold text-navy">
                       {type.title}
                     </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-gray">{type.body}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-navy">{type.body}</p>
                   </div>
                 </article>
               </StaggerItem>
@@ -107,8 +108,8 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <h3 className="font-heading text-xl font-bold sm:text-2xl">
-            Before & After
+          <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
+            Before & after
           </h3>
           <div className="mt-6">
             <ComparisonSlider
@@ -125,7 +126,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <h3 className="font-heading text-xl font-bold sm:text-2xl">FAQ</h3>
+          <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">FAQ</h3>
           <div className="mt-6">
             <Accordion items={content.faqs} />
           </div>

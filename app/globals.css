@@ -29,7 +29,7 @@
   }
 
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-gold;
+    @apply outline-2 outline-offset-2 outline-gold-500;
   }
 }
 
@@ -46,10 +46,19 @@
   }
 
   .btn-primary {
-    @apply btn bg-gold text-navy shadow-subtle;
-    @apply hover:-translate-y-0.5 hover:shadow-md;
-    @apply active:translate-y-0 active:shadow-subtle;
+    @apply btn bg-gold-400 text-navy;
+    @apply hover:-translate-y-0.5 hover:bg-gold-300;
+    @apply active:translate-y-0;
     @apply focus-visible:outline-navy;
+    box-shadow: 0 1px 2px rgba(139, 90, 43, 0.14), 0 4px 10px rgba(139, 90, 43, 0.08);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 2px 4px rgba(139, 90, 43, 0.16), 0 8px 16px rgba(139, 90, 43, 0.1);
+  }
+
+  .btn-primary:active {
+    box-shadow: 0 1px 2px rgba(139, 90, 43, 0.12);
   }
 
   .btn-secondary {
@@ -63,7 +72,7 @@
     @apply btn border border-offwhite bg-transparent text-offwhite shadow-none;
     @apply hover:-translate-y-0.5 hover:bg-offwhite hover:text-navy hover:shadow-md;
     @apply active:translate-y-0 active:shadow-none;
-    @apply focus-visible:outline-gold;
+    @apply focus-visible:outline-gold-500;
   }
 
   .btn:disabled {

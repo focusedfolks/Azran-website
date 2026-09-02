@@ -6,7 +6,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gold/50 bg-navy text-offwhite">
+    <footer className="border-t border-gold-500/50 bg-navy text-offwhite">
       <div className="mx-auto grid w-full max-w-content gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8 lg:py-20">
         <div className="max-w-sm">
           <Logo tone="onDark" imageClassName="h-14 w-auto sm:h-16" />
@@ -16,7 +16,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-heading text-sm font-bold uppercase tracking-[0.16em] text-gold">
+          <h2 className="font-heading text-sm font-bold uppercase tracking-[0.16em] text-gold-400">
             Quick Links
           </h2>
           <ul className="mt-5 space-y-3">
@@ -24,7 +24,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-offwhite/80 transition-colors duration-200 hover:text-gold"
+                  className="text-sm text-offwhite/80 transition-colors duration-200 hover:text-gold-300"
                 >
                   {link.label}
                 </Link>
@@ -34,7 +34,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-heading text-sm font-bold uppercase tracking-[0.16em] text-gold">
+          <h2 className="font-heading text-sm font-bold uppercase tracking-[0.16em] text-gold-400">
             Services
           </h2>
           <ul className="mt-5 space-y-3">
@@ -42,7 +42,7 @@ export function Footer() {
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="text-sm text-offwhite/80 transition-colors duration-200 hover:text-gold"
+                  className="text-sm text-offwhite/80 transition-colors duration-200 hover:text-gold-300"
                 >
                   {link.label}
                 </Link>
@@ -52,14 +52,14 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="font-heading text-sm font-bold uppercase tracking-[0.16em] text-gold">
+          <h2 className="font-heading text-sm font-bold uppercase tracking-[0.16em] text-gold-400">
             Contact Info
           </h2>
           <ul className="mt-5 space-y-3 text-sm text-offwhite/80">
             <li>
               <a
                 href={SITE.contact.phoneHref}
-                className="transition-colors duration-200 hover:text-gold"
+                className="transition-colors duration-200 hover:text-gold-300"
               >
                 {SITE.contact.phone}
               </a>
@@ -67,7 +67,7 @@ export function Footer() {
             <li>
               <a
                 href={`mailto:${SITE.contact.email}`}
-                className="transition-colors duration-200 hover:text-gold"
+                className="transition-colors duration-200 hover:text-gold-300"
               >
                 {SITE.contact.email}
               </a>
@@ -79,7 +79,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gold/50">
+      <div className="border-t border-gold-500/50">
         <div className="mx-auto flex w-full max-w-content flex-col items-start justify-between gap-2 px-4 py-5 sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <p className="text-xs text-offwhite/60">
             © {year} {SITE.name}. DED License No. {SITE.license.number}. All

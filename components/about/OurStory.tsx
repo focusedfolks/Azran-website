@@ -10,7 +10,7 @@ export function OurStory() {
     <Section className="bg-offwhite">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <SectionHeading eyebrow="Who we are" heading="Our Story" />
+          <SectionHeading eyebrow="Who we are" heading="Our story" />
           {/*
             PLACEHOLDER COPY — do not publish as-is.
             [COMPANY_STORY — replace with real company background, founding year, growth]

@@ -60,7 +60,7 @@ export function ServicesSubNav() {
             >
               {link.label}
               {isActive ? (
-                <span className="absolute inset-x-4 bottom-0 h-px bg-gold" />
+                <span className="absolute inset-x-4 bottom-0 h-px bg-gold-500" />
               ) : null}
             </a>
           );

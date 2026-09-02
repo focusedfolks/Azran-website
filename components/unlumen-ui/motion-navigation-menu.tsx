@@ -397,7 +397,7 @@ function MotionNavigationMenuList({
       controlledItems
       hover
       className={cn(
-        "pointer-events-none rounded-sm bg-gold/15",
+        "pointer-events-none rounded-sm bg-gold-400/15",
         highlightClassName,
       )}
       style={{ zIndex: -1 }}
@@ -437,7 +437,7 @@ function MotionNavigationMenuItem({
 }
 
 const motionNavigationMenuTriggerStyle = cva(
-  "group inline-flex h-11 w-max items-center justify-center rounded-sm bg-transparent px-3 py-2 text-sm font-body font-medium tracking-wide text-gray outline-none transition-colors duration-200 hover:text-navy focus:text-navy disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold",
+  "group inline-flex h-11 w-max items-center justify-center rounded-sm bg-transparent px-3 py-2 text-sm font-body font-medium tracking-wide text-gray outline-none transition-colors duration-200 hover:text-navy focus:text-navy disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
 );
 
 function MotionNavigationMenuTrigger({
@@ -580,7 +580,7 @@ function MotionNavigationMenuContentInner({
       controlledItems
       hover
       className={cn(
-        "pointer-events-none rounded-sm bg-gold/15",
+        "pointer-events-none rounded-sm bg-gold-400/15",
         highlightClassName,
       )}
       style={{ zIndex: -1 }}
@@ -728,7 +728,7 @@ function MotionNavigationMenuLink({
         className={cn(
           "flex flex-col gap-1 rounded-sm p-2 text-sm outline-none transition-colors duration-200",
           "hover:text-navy focus:text-navy data-[active=true]:text-navy",
-          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold",
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
           className,
         )}
         {...props}

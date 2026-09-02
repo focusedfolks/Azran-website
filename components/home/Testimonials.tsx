@@ -20,7 +20,7 @@ export function Testimonials() {
         <SectionHeading
           align="center"
           eyebrow="Feedback"
-          heading="Client Feedback"
+          heading="Client feedback"
         />
 
         <ReviewsCarousel className="mt-10" reviews={REVIEWS} />

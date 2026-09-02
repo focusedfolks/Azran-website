@@ -12,7 +12,7 @@ export function FinalCta() {
           align="center"
           tone="onDark"
           eyebrow="Get in touch"
-          heading="Have a Project in Mind?"
+          heading="Have a project in mind?"
         />
         <p className="mt-6 text-lg font-normal text-offwhite/80">
           Let&apos;s talk about how we can help.

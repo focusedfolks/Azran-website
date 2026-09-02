@@ -90,7 +90,7 @@ export function Navbar() {
               >
                 Services
               </MotionNavigationMenuTrigger>
-              <MotionNavigationMenuContent highlightClassName="bg-gold/15 rounded-sm">
+              <MotionNavigationMenuContent highlightClassName="bg-gold-400/15 rounded-sm">
                 <ServicesMegaMenu />
               </MotionNavigationMenuContent>
             </MotionNavigationMenuItem>
@@ -181,7 +181,7 @@ export function Navbar() {
                         className={cn(
                           "flex min-h-11 flex-1 items-center border-l-2 px-4 py-3 text-base font-body font-medium transition-colors duration-200",
                           active
-                            ? "border-gold bg-white text-navy"
+                            ? "border-gold-500 bg-white text-navy"
                             : "border-transparent text-gray hover:border-navy/20 hover:text-navy",
                         )}
                         aria-current={active ? "page" : undefined}
@@ -223,7 +223,7 @@ export function Navbar() {
                     className={cn(
                       "flex min-h-11 items-center border-l-2 px-4 py-3 text-base font-body font-medium transition-colors duration-200",
                       active
-                        ? "border-gold bg-white text-navy"
+                        ? "border-gold-500 bg-white text-navy"
                         : "border-transparent text-gray hover:border-navy/20 hover:text-navy",
                     )}
                     aria-current={active ? "page" : undefined}
@@ -289,7 +289,7 @@ function ServicesMegaMenu() {
               <span className="block font-heading text-sm font-bold text-navy">
                 {service.title}
               </span>
-              <span className="block text-xs font-normal leading-relaxed text-gray">
+              <span className="block text-xs font-normal leading-relaxed text-navy">
                 {service.description}
               </span>
             </span>
@@ -299,7 +299,7 @@ function ServicesMegaMenu() {
           href="/services"
           className="items-center px-4 py-3 font-heading text-sm font-bold text-navy"
         >
-          View all services
+          View All Services
         </MotionNavigationMenuLink>
       </div>
 
@@ -318,7 +318,7 @@ function ServicesMegaMenu() {
                 <span className="block font-medium text-navy">
                   {service.title}
                 </span>
-                <span className="block text-xs font-normal leading-snug text-gray">
+                <span className="block text-xs font-normal leading-snug text-navy">
                   {service.description}
                 </span>
               </span>

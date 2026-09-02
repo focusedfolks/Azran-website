@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { SERVICES } from "@/lib/site";
 import { PAGE_SERVICE_IMAGES } from "@/lib/service-images";
+import { asServiceHeading } from "@/lib/heading";
 import { serviceIcons } from "@/components/icons";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -19,9 +20,9 @@ export function OtherServices() {
         <Reveal>
           <SectionHeading
             eyebrow="Also available"
-            heading="Additional Technical Services"
+            heading="Additional technical services"
           >
-            <p className="mt-6 max-w-2xl text-base font-normal text-gray">
+            <p className="mt-6 max-w-2xl text-base font-normal text-navy">
               Ask us about these services when you contact us.
             </p>
           </SectionHeading>
@@ -49,13 +50,13 @@ export function OtherServices() {
                     </div>
                   ) : null}
                   <div className="p-4">
-                    <span className="text-navy transition-colors duration-[250ms] ease-out group-hover:text-gold">
+                    <span className="text-navy transition-colors duration-[250ms] ease-out group-hover:text-gold-300">
                       {serviceIcons[service.slug]}
                     </span>
                     <h3 className="mt-3 font-heading text-sm font-bold text-navy">
-                      {service.title}
+                      {asServiceHeading(service.title)}
                     </h3>
-                    <p className="mt-1.5 text-xs leading-relaxed text-gray">
+                    <p className="mt-1.5 text-xs leading-relaxed text-navy">
                       {service.description}
                     </p>
                   </div>

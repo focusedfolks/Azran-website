@@ -51,7 +51,7 @@ export function PageHeader({
               return (
                 <li key={crumb.label} className="flex items-center gap-2">
                   {index > 0 ? (
-                    <span aria-hidden="true" className="text-gold">
+                    <span aria-hidden="true" className="text-gold-400">
                       /
                     </span>
                   ) : null}
@@ -62,7 +62,7 @@ export function PageHeader({
                   ) : (
                     <Link
                       href={crumb.href}
-                      className="transition-colors duration-200 hover:text-gold"
+                      className="transition-colors duration-200 hover:text-gold-300"
                     >
                       {crumb.label}
                     </Link>

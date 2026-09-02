@@ -10,14 +10,14 @@ export function WhyChooseUs() {
   return (
     <Section className="bg-offwhite">
       <Reveal>
-        <SectionHeading eyebrow="Why Azran" heading="Why Choose Us" />
+        <SectionHeading eyebrow="Why Azran" heading="Why choose us" />
       </Reveal>
 
       <Stagger className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {TRUST_ITEMS.map((item) => (
           <StaggerItem key={item.id}>
             <article className="h-full border border-navy/10 bg-offwhite p-6 shadow-subtle">
-              <span className="text-gold">{trustIcons[item.id]}</span>
+              <span className="text-gold-400">{trustIcons[item.id]}</span>
               <h3 className="mt-4 font-heading text-lg font-bold text-navy">
                 {item.label}
               </h3>

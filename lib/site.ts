@@ -29,27 +29,27 @@ export const SITE = {
 export const LICENSE_ITEMS = [
   {
     id: "license",
-    title: "Trade License",
+    title: "Trade license",
     detail: SITE.license.number,
   },
   {
     id: "legal",
-    title: "Legal Type",
+    title: "Legal type",
     detail: SITE.license.legalType,
   },
   {
     id: "authority",
-    title: "Issuing Authority",
+    title: "Issuing authority",
     detail: SITE.license.issuingAuthority,
   },
   {
     id: "register",
-    title: "Register No",
+    title: "Register No.",
     detail: SITE.license.registerNo,
   },
   {
     id: "chamber",
-    title: "DCCI No",
+    title: "DCCI No.",
     detail: SITE.license.dcciNo,
   },
 ] as const;
@@ -68,7 +68,7 @@ export const SERVICES = [
     anchor: "tiling",
     title: "Floor & Wall Tiling",
     description:
-      "Precision floor and wall tiling for villas, lobbies, and commercial interiors — from setting out to grout finish.",
+      "Precision floor and wall tiling for villas, lobbies, and commercial interiors — from setting-out to grout finish.",
     featured: true,
   },
   {
@@ -76,7 +76,7 @@ export const SERVICES = [
     anchor: "cleaning",
     title: "Building Cleaning Services",
     description:
-      "Scheduled and handover cleaning for occupied buildings, common areas, and post-fit-out spaces.",
+      "Scheduled cleaning and handover cleans for occupied buildings, common areas, and post-fit-out spaces.",
     featured: true,
   },
   {
@@ -166,37 +166,36 @@ export const SERVICE_LINKS = [
 export const TRUST_ITEMS = [
   {
     id: "professionals",
-    label: "Experienced Professionals",
+    label: "Experienced professionals",
     description:
       "[PLACEHOLDER] Short statement on crew experience and supervision. Replace with client wording.",
   },
   {
     id: "workmanship",
-    label: "Quality Workmanship",
+    label: "Quality workmanship",
     description:
       "[PLACEHOLDER] Short statement on finish quality and site standards. Replace with client wording.",
   },
   {
     id: "delivery",
-    label: "On-Time Delivery",
+    label: "On-time delivery",
     description:
       "[PLACEHOLDER] Short statement on scheduling and programme reliability. Replace with client wording.",
   },
   {
     id: "pricing",
-    label: "Affordable Pricing",
-    description:
-      "[PLACEHOLDER] Short statement on transparent, competitive pricing. Replace with client wording.",
+    label: "Transparent pricing",
+    description: "Clear, upfront quotes with no hidden costs.",
   },
   {
     id: "safety",
-    label: "Safety First",
+    label: "Safety first",
     description:
       "[PLACEHOLDER] Short statement on site safety practice. Replace with client wording.",
   },
   {
     id: "satisfaction",
-    label: "Customer Satisfaction",
+    label: "Customer satisfaction",
     description:
       "[PLACEHOLDER] Short statement on aftercare and client communication. Replace with client wording.",
   },

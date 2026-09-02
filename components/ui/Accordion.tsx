@@ -54,7 +54,7 @@ export function Accordion({ items }: AccordionProps) {
                   transition={{ duration: reduce ? 0 : 0.3, ease: [0, 0, 0.2, 1] }}
                   className="overflow-hidden"
                 >
-                  <p className="pb-5 text-sm leading-relaxed text-gray">
+                  <p className="pb-5 text-sm leading-relaxed text-navy">
                     {item.answer}
                   </p>
                 </motion.div>

@@ -74,7 +74,7 @@ function ReviewCard({
       }}
     >
       <blockquote className="relative">
-        <div className="absolute -top-1 -left-2 font-heading text-4xl leading-none text-gold">
+        <div className="absolute -top-1 -left-2 font-heading text-4xl leading-none text-gold-400">
           “
         </div>
         <p className="relative font-body text-sm leading-relaxed text-navy sm:text-base">
@@ -254,7 +254,7 @@ export default function ReviewsCarousel({
                   className={cn(
                     "h-2 rounded-sm transition-all duration-300 ease-out",
                     index === activeIndex
-                      ? "w-8 bg-gold"
+                      ? "w-8 bg-gold-400"
                       : "w-2 bg-navy/20 hover:bg-navy/40",
                   )}
                   key={review.id}

@@ -26,7 +26,7 @@ export function SectionHeading({
 
   return (
     <div className={cn(centered && "mx-auto text-center", className)}>
-      <p className="font-body text-xs font-medium uppercase tracking-[0.22em] text-gold">
+      <p className="font-body text-xs font-medium uppercase tracking-[0.22em] text-gold-400">
         {eyebrow}
       </p>
       <div
@@ -39,7 +39,7 @@ export function SectionHeading({
           <span
             className={cn(
               "mt-1 shrink-0",
-              tone === "onDark" ? "text-gold" : "text-navy",
+              tone === "onDark" ? "text-gold-400" : "text-navy",
             )}
             aria-hidden="true"
           >
@@ -57,7 +57,7 @@ export function SectionHeading({
       </div>
       <span
         aria-hidden="true"
-        className={cn("mt-4 block h-[3px] w-10 bg-gold", centered && "mx-auto")}
+        className={cn("mt-4 block h-[3px] w-10 bg-gold-500", centered && "mx-auto")}
       />
       {children}
     </div>

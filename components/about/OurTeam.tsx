@@ -10,7 +10,7 @@ export function OurTeam() {
   return (
     <Section className="bg-navy">
       <Reveal>
-        <SectionHeading tone="onDark" eyebrow="People" heading="Our Team" />
+        <SectionHeading tone="onDark" eyebrow="People" heading="Our team" />
       </Reveal>
 
       <Reveal delay={0.08}>
@@ -18,13 +18,13 @@ export function OurTeam() {
           className="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-end sm:gap-6"
           aria-label={`${SITE.employees}+ employees`}
         >
-          <p className="flex items-baseline font-heading text-hero-mobile font-extrabold tabular-nums tracking-tight text-gold lg:text-hero">
+          <p className="flex items-baseline font-heading text-hero-mobile font-extrabold tabular-nums tracking-tight text-gold-400 lg:text-hero">
             <CountUp
               to={SITE.employees}
               separator=","
               digitEffect="slide"
               duration={2}
-              className="text-gold"
+              className="text-gold-400"
             />
             <span aria-hidden="true">+</span>
           </p>
