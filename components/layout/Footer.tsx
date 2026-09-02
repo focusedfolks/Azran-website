@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="border-t border-gold-500/50 bg-navy text-offwhite">
       <div className="mx-auto grid w-full max-w-content gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8 lg:py-20">
         <div className="max-w-sm">
-          <Logo tone="onDark" imageClassName="h-14 w-auto sm:h-16" />
+          <Logo imageClassName="h-14 w-auto sm:h-16" />
           <p className="mt-5 text-sm leading-relaxed text-offwhite/75">
             {SITE.tagline}
           </p>

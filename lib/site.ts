@@ -1,6 +1,5 @@
 export const SITE = {
   name: "Azran Technical Services LLC",
-  shortName: "Azran",
   tagline:
     "Reliable technical services and building maintenance for commercial and residential properties across the UAE.",
   whatsappUrl: "https://wa.me/971586125077",
