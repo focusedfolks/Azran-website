@@ -221,7 +221,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-navy text-offwhite"
+      className="relative overflow-hidden bg-[#0D182A] text-offwhite"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
