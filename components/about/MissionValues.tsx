@@ -9,17 +9,17 @@ const CARDS = [
   {
     id: "mission",
     title: "Mission",
-    body: "[PLACEHOLDER_MISSION — replace with the client's mission statement.]",
+    body: "To deliver precision flooring and finishing work that meets the highest standards of craftsmanship, on schedule and within budget, for every villa, lobby, and commercial project we take on across the UAE.",
   },
   {
     id: "vision",
     title: "Vision",
-    body: "[PLACEHOLDER_VISION — replace with the client's vision statement.]",
+    body: "To be the UAE's most trusted name in floor tiling and finishing — known as much for reliability and clean execution as for the quality of the floors we lay.",
   },
   {
     id: "values",
     title: "Values",
-    body: "[PLACEHOLDER_VALUES — replace with the client's stated values.]",
+    body: "Precision, transparency, and accountability on every site — we do the job right the first time, communicate clearly with clients throughout, and stand behind our work after handover.",
   },
 ] as const;
 
@@ -42,7 +42,7 @@ export function MissionValues() {
               <h3 className="mt-5 font-heading text-xl font-bold text-navy">
                 {card.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray">{card.body}</p>
+              <p className="mt-3 text-sm leading-relaxed text-navy">{card.body}</p>
             </article>
           </StaggerItem>
         ))}

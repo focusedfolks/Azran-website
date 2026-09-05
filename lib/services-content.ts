@@ -89,8 +89,8 @@ export const TILING_CONTENT: ServiceDetailContent = {
     {
       title: "Floor tiling",
       body: "[PLACEHOLDER] Internal floors in living, lobby, and circulation areas.",
-      image: "/images/services-tiling-floor.jpg",
-      imageAlt: "Large-format grey porcelain floor tiles in an open-plan living area",
+      image: "/images/stock-grout-closeup.jpg",
+      imageAlt: "Gloved hand setting large-format porcelain floor tiles with leveling wedges",
     },
     {
       title: "Wall tiling",
@@ -101,8 +101,8 @@ export const TILING_CONTENT: ServiceDetailContent = {
     {
       title: "Bathroom tiling",
       body: "[PLACEHOLDER] Floors, walls, and wet-room detailing.",
-      image: "/images/services-tiling-bathroom.jpg",
-      imageAlt: "Partially completed bathroom mosaic floor with a grout float",
+      image: "/images/stock-tile-floor.jpg",
+      imageAlt: "Finished walk-in shower with large-format stone-look wall and floor tiles",
     },
     {
       title: "Kitchen tiling",

@@ -21,7 +21,7 @@ export function WhyChooseUs() {
               <h3 className="mt-4 font-heading text-lg font-bold text-navy">
                 {item.label}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray">
+              <p className="mt-2 text-sm leading-relaxed text-navy">
                 {item.description}
               </p>
             </article>

@@ -167,19 +167,19 @@ export const TRUST_ITEMS = [
     id: "professionals",
     label: "Experienced professionals",
     description:
-      "[PLACEHOLDER] Short statement on crew experience and supervision. Replace with client wording.",
+      "Every crew is led by a supervisor with years of on-site tiling experience, so your project gets proper oversight from setout to final finish, not just labour.",
   },
   {
     id: "workmanship",
     label: "Quality workmanship",
     description:
-      "[PLACEHOLDER] Short statement on finish quality and site standards. Replace with client wording.",
+      "Large-format tiles demand precise levelling and clean grout lines — we hold every job to the same finish standard, checked before we call it done.",
   },
   {
     id: "delivery",
     label: "On-time delivery",
     description:
-      "[PLACEHOLDER] Short statement on scheduling and programme reliability. Replace with client wording.",
+      "We plan around your project's real schedule and communicate early if anything shifts, so your handover date doesn't become a moving target.",
   },
   {
     id: "pricing",
@@ -190,21 +190,21 @@ export const TRUST_ITEMS = [
     id: "safety",
     label: "Safety first",
     description:
-      "[PLACEHOLDER] Short statement on site safety practice. Replace with client wording.",
+      "Every site follows standard safety practice for tools, materials handling, and access — for our crew and everyone else on site.",
   },
   {
     id: "satisfaction",
     label: "Customer satisfaction",
     description:
-      "[PLACEHOLDER] Short statement on aftercare and client communication. Replace with client wording.",
+      "We stay reachable after handover — if something needs a follow-up visit, we come back and sort it.",
   },
 ] as const;
 
 export const FEATURED_PROJECTS = [
   {
-    src: "/images/featured-tiling-floor.png",
+    src: "/images/stock-tiled-interior.jpg",
     name: "Villa floor tiling",
-    alt: "Finished large-format limestone-look floor in a UAE villa living room",
+    alt: "Modern villa interior with large-format tiled floors in the kitchen and living area",
   },
   {
     src: "/images/featured-cleaning-lobby.png",
@@ -233,23 +233,3 @@ export const FEATURED_PROJECTS = [
   },
 ] as const;
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "PLACEHOLDER_TESTIMONIAL — replace with a verified client review about workmanship and delivery.",
-    name: "[Client Name]",
-    role: "[Role / Company]",
-  },
-  {
-    quote:
-      "PLACEHOLDER_TESTIMONIAL — replace with a verified client review about tiling or cleaning quality.",
-    name: "[Client Name]",
-    role: "[Role / Company]",
-  },
-  {
-    quote:
-      "PLACEHOLDER_TESTIMONIAL — replace with a verified client review about response time and aftercare.",
-    name: "[Client Name]",
-    role: "[Role / Company]",
-  },
-] as const;

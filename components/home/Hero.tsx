@@ -56,8 +56,8 @@ const SLIDES: HeroSlide[] = [
         alt: "Technician checking a newly laid villa floor with a spirit level",
       },
       {
-        src: "/images/hero-slide-floor-2.png",
-        alt: "Notched trowel spreading tile adhesive on a subfloor",
+        src: "/images/stock-tiling-install.jpg",
+        alt: "Floor tiling in progress with mortar, tools, and freshly laid tiles",
       },
       {
         src: "/images/hero-slide-floor-3.png",
