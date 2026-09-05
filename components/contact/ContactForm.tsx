@@ -130,7 +130,7 @@ export function ContactForm() {
 
   return (
     <div className="flex h-full flex-col border border-navy/10 bg-offwhite p-6 sm:p-8">
-      <SectionHeading eyebrow="Enquire" heading="Send a message" />
+      <SectionHeading eyebrow="Enquire" heading="Send a Message" />
 
       <form
         className="mt-8 flex flex-1 flex-col gap-5"
@@ -153,7 +153,7 @@ export function ContactForm() {
             aria-describedby={errors.name ? "contact-name-error" : undefined}
           />
           {errors.name ? (
-            <p id="contact-name-error" className="mt-1.5 text-sm text-navy" role="alert">
+            <p id="contact-name-error" className="mt-1.5 text-sm text-ink" role="alert">
               {errors.name}
             </p>
           ) : null}
@@ -176,7 +176,7 @@ export function ContactForm() {
             aria-describedby={errors.phone ? "contact-phone-error" : undefined}
           />
           {errors.phone ? (
-            <p id="contact-phone-error" className="mt-1.5 text-sm text-navy" role="alert">
+            <p id="contact-phone-error" className="mt-1.5 text-sm text-ink" role="alert">
               {errors.phone}
             </p>
           ) : null}
@@ -198,7 +198,7 @@ export function ContactForm() {
             aria-describedby={errors.email ? "contact-email-error" : undefined}
           />
           {errors.email ? (
-            <p id="contact-email-error" className="mt-1.5 text-sm text-navy" role="alert">
+            <p id="contact-email-error" className="mt-1.5 text-sm text-ink" role="alert">
               {errors.email}
             </p>
           ) : null}
@@ -223,7 +223,7 @@ export function ContactForm() {
             <option value="Other">Other</option>
           </select>
           {errors.service ? (
-            <p id="contact-service-error" className="mt-1.5 text-sm text-navy" role="alert">
+            <p id="contact-service-error" className="mt-1.5 text-sm text-ink" role="alert">
               {errors.service}
             </p>
           ) : null}
@@ -244,7 +244,7 @@ export function ContactForm() {
             aria-describedby={errors.message ? "contact-message-error" : undefined}
           />
           {errors.message ? (
-            <p id="contact-message-error" className="mt-1.5 text-sm text-navy" role="alert">
+            <p id="contact-message-error" className="mt-1.5 text-sm text-ink" role="alert">
               {errors.message}
             </p>
           ) : null}
@@ -255,8 +255,8 @@ export function ContactForm() {
             role="status"
             className={`border px-4 py-3 text-sm ${
               status === "success"
-                ? "border-gold-500 bg-gold-400/10 text-navy"
-                : "border-navy/20 bg-offwhite text-navy"
+                ? "border-gold-500 bg-gold-400/10 text-ink"
+                : "border-navy/20 bg-offwhite text-ink"
             }`}
           >
             {statusMessage}

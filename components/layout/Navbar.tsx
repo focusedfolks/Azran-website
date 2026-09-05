@@ -85,7 +85,7 @@ export function Navbar() {
             <MotionNavigationMenuItem value="services">
               <MotionNavigationMenuTrigger
                 className={cn(
-                  isActivePath(pathname, "/services") && "text-navy",
+                  isActivePath(pathname, "/services") && "text-ink",
                 )}
               >
                 Services
@@ -114,7 +114,7 @@ export function Navbar() {
           <button
             ref={menuBtnRef}
             type="button"
-            className="inline-flex h-11 w-11 cursor-pointer items-center justify-center text-navy lg:hidden"
+            className="inline-flex h-11 w-11 cursor-pointer items-center justify-center text-ink lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls={drawerId}
@@ -146,13 +146,13 @@ export function Navbar() {
         )}
       >
         <div className="flex h-[72px] items-center justify-between border-b border-navy/10 px-4">
-          <span className="font-heading text-sm font-bold tracking-wide text-navy">
+          <span className="font-heading text-sm font-bold tracking-wide text-ink">
             Menu
           </span>
           <button
             ref={closeBtnRef}
             type="button"
-            className="inline-flex h-11 w-11 cursor-pointer items-center justify-center text-navy"
+            className="inline-flex h-11 w-11 cursor-pointer items-center justify-center text-ink"
             aria-label="Close menu"
             onClick={() => {
               setOpen(false);
@@ -179,10 +179,10 @@ export function Navbar() {
                       <Link
                         href={link.href}
                         className={cn(
-                          "flex min-h-11 flex-1 items-center border-l-2 px-4 py-3 text-base font-body font-medium transition-colors duration-200",
+                          "flex min-h-11 flex-1 items-center border-l-2 px-4 py-3 text-base font-body font-medium transition-colors duration-300 ease-in-out",
                           active
-                            ? "border-gold-500 bg-white text-navy"
-                            : "border-transparent text-gray hover:border-navy/20 hover:text-navy",
+                            ? "border-gold-500 bg-white text-ink"
+                            : "border-transparent text-gray hover:border-navy/20 hover:text-ink",
                         )}
                         aria-current={active ? "page" : undefined}
                       >
@@ -190,7 +190,7 @@ export function Navbar() {
                       </Link>
                       <button
                         type="button"
-                        className="inline-flex h-11 w-11 shrink-0 items-center justify-center text-navy"
+                        className="inline-flex h-11 w-11 shrink-0 items-center justify-center text-ink"
                         aria-expanded={servicesOpen}
                         aria-label={
                           servicesOpen
@@ -208,7 +208,7 @@ export function Navbar() {
                           <li key={service.slug}>
                             <Link
                               href={`/services#${service.anchor}`}
-                              className="flex min-h-11 items-center px-4 py-2 text-sm font-body text-gray transition-colors duration-200 hover:text-navy"
+                              className="flex min-h-11 items-center px-4 py-2 text-sm font-body text-gray transition-colors duration-300 ease-in-out hover:text-ink"
                             >
                               {service.title}
                             </Link>
@@ -221,10 +221,10 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "flex min-h-11 items-center border-l-2 px-4 py-3 text-base font-body font-medium transition-colors duration-200",
+                      "flex min-h-11 items-center border-l-2 px-4 py-3 text-base font-body font-medium transition-colors duration-300 ease-in-out",
                       active
-                        ? "border-gold-500 bg-white text-navy"
-                        : "border-transparent text-gray hover:border-navy/20 hover:text-navy",
+                        ? "border-gold-500 bg-white text-ink"
+                        : "border-transparent text-gray hover:border-navy/20 hover:text-ink",
                     )}
                     aria-current={active ? "page" : undefined}
                   >
@@ -263,7 +263,7 @@ function NavItemLink({
         aria-current={active ? "page" : undefined}
         className={cn(
           "h-11 items-center justify-center px-3 py-2 font-body font-medium tracking-wide text-gray",
-          active && "text-navy",
+          active && "text-ink",
         )}
       >
         {label}
@@ -282,14 +282,14 @@ function ServicesMegaMenu() {
             href={`/services#${service.anchor}`}
             className="min-h-[7.5rem] justify-between bg-offwhite p-4"
           >
-            <span className="flex size-9 items-center justify-center border border-navy/10 bg-white text-navy">
+            <span className="flex size-9 items-center justify-center border border-navy/10 bg-white text-ink">
               {serviceIcons[service.slug]}
             </span>
             <span className="space-y-1">
-              <span className="block font-heading text-sm font-bold text-navy">
+              <span className="block font-heading text-sm font-bold text-ink">
                 {service.title}
               </span>
-              <span className="block text-xs font-normal leading-relaxed text-navy">
+              <span className="block text-xs font-normal leading-relaxed text-ink">
                 {service.description}
               </span>
             </span>
@@ -297,7 +297,7 @@ function ServicesMegaMenu() {
         ))}
         <MotionNavigationMenuLink
           href="/services"
-          className="items-center px-4 py-3 font-heading text-sm font-bold text-navy"
+          className="items-center px-4 py-3 font-heading text-sm font-bold text-ink"
         >
           View All Services
         </MotionNavigationMenuLink>
@@ -311,14 +311,14 @@ function ServicesMegaMenu() {
             className="p-3"
           >
             <span className="flex items-start gap-2">
-              <span className="mt-0.5 text-navy [&_svg]:h-4 [&_svg]:w-4">
+              <span className="mt-0.5 text-ink [&_svg]:h-4 [&_svg]:w-4">
                 {serviceIcons[service.slug]}
               </span>
               <span className="space-y-0.5">
-                <span className="block font-medium text-navy">
+                <span className="block font-medium text-ink">
                   {service.title}
                 </span>
-                <span className="block text-xs font-normal leading-snug text-navy">
+                <span className="block text-xs font-normal leading-snug text-ink">
                   {service.description}
                 </span>
               </span>

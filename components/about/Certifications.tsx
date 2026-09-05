@@ -10,8 +10,8 @@ export function Certifications() {
   return (
     <Section className="bg-offwhite">
       <Reveal>
-        <SectionHeading eyebrow="Credentials" heading="Licenses & registration">
-          <p className="mt-6 max-w-2xl text-base font-normal leading-relaxed text-gray">
+        <SectionHeading eyebrow="Credentials" heading="Licenses & Registration">
+          <p className="mt-6 max-w-2xl text-base font-normal leading-relaxed text-ink">
             Azran Technical Services LLC is licensed by the Dubai Department of
             Economic Development and registered with the Dubai Chamber of
             Commerce.
@@ -24,10 +24,10 @@ export function Certifications() {
           <StaggerItem key={item.id}>
             <article className="flex h-full flex-col items-center border border-navy/10 bg-offwhite px-6 py-8 text-center shadow-subtle">
               <span className="text-gold-400">{certIcons[item.id]}</span>
-              <h3 className="mt-4 font-heading text-base font-bold text-navy">
+              <h3 className="mt-4 font-heading text-base font-bold text-ink">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray">
+              <p className="mt-2 text-sm leading-relaxed text-ink">
                 {item.detail}
               </p>
             </article>

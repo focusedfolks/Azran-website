@@ -31,7 +31,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
             heading={asServiceHeading(content.title)}
             icon={serviceIcons[content.iconKey]}
           />
-          <div className="mt-6 max-w-3xl space-y-3 text-base font-normal leading-relaxed text-navy sm:text-lg">
+          <div className="mt-6 max-w-3xl space-y-3 text-base font-normal leading-relaxed text-ink sm:text-lg">
             {content.overview.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -40,8 +40,8 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
 
         <Reveal className="mt-14 md:mt-16">
           <div className="border border-navy/10 bg-offwhite px-5 py-8 shadow-subtle sm:px-8 sm:py-10">
-            <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
-              Our process
+            <h3 className="font-heading text-xl font-bold text-ink sm:text-2xl">
+              Our Process
             </h3>
             <ol className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {content.process.map((step, index) => (
@@ -49,11 +49,11 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
                   <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold-500 font-heading text-sm font-extrabold text-gold-400">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="mt-4 block text-navy">{markIcons[step.icon]}</span>
-                  <h4 className="mt-3 font-heading text-base font-bold text-navy">
+                  <span className="mt-4 block text-ink">{markIcons[step.icon]}</span>
+                  <h4 className="mt-3 font-heading text-base font-bold text-ink">
                     {step.title}
                   </h4>
-                  <p className="mt-2 text-sm leading-relaxed text-navy">{step.body}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink">{step.body}</p>
                 </li>
               ))}
             </ol>
@@ -61,15 +61,15 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
+          <h3 className="font-heading text-xl font-bold text-ink sm:text-2xl">
             {content.materialsTitle}
           </h3>
           <Stagger className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {content.materials.map((item) => (
               <StaggerItem key={item.title}>
                 <div className="flex items-start gap-3 border border-navy/10 bg-offwhite p-4">
-                  <span className="text-navy">{markIcons[item.icon]}</span>
-                  <p className="text-sm font-medium text-navy">{item.title}</p>
+                  <span className="text-ink">{markIcons[item.icon]}</span>
+                  <p className="text-sm font-medium text-ink">{item.title}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -77,7 +77,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
+          <h3 className="font-heading text-xl font-bold text-ink sm:text-2xl">
             {content.typesTitle}
           </h3>
           <Stagger className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -96,10 +96,10 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
                     </div>
                   ) : null}
                   <div className="p-6">
-                    <h4 className="font-heading text-lg font-bold text-navy">
+                    <h4 className="font-heading text-lg font-bold text-ink">
                       {type.title}
                     </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-navy">{type.body}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink">{type.body}</p>
                   </div>
                 </article>
               </StaggerItem>
@@ -108,8 +108,8 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">
-            Before & after
+          <h3 className="font-heading text-xl font-bold text-ink sm:text-2xl">
+            Before & After
           </h3>
           <div className="mt-6">
             <ComparisonSlider
@@ -126,7 +126,7 @@ export function ServiceDetail({ content, aliasId, className }: ServiceDetailProp
         </Reveal>
 
         <Reveal className="mt-14 md:mt-16">
-          <h3 className="font-heading text-xl font-bold text-navy sm:text-2xl">FAQ</h3>
+          <h3 className="font-heading text-xl font-bold text-ink sm:text-2xl">FAQ</h3>
           <div className="mt-6">
             <Accordion items={content.faqs} />
           </div>

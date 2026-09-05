@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader
-        title="Contact us"
+        title="Contact Us"
         image="/images/header-contact.png"
         imageAlt="Daylit office corridor in Bur Dubai"
         crumbs={[

@@ -162,7 +162,7 @@ export function ProjectModal({
               <p className="font-heading text-[0.65rem] font-bold uppercase tracking-[0.16em] text-gold-400">
                 {project.categoryLabel}
               </p>
-              <h2 id={titleId} className="mt-2 font-heading text-2xl font-extrabold text-navy">
+              <h2 id={titleId} className="mt-2 font-heading text-2xl font-extrabold text-ink">
                 {project.title}
               </h2>
 
@@ -175,8 +175,8 @@ export function ProjectModal({
 
               {project.beforeSrc && project.afterSrc ? (
                 <div className="mt-8">
-                  <h3 className="font-heading text-lg font-bold text-navy">
-                    Before & after
+                  <h3 className="font-heading text-lg font-bold text-ink">
+                    Before & After
                   </h3>
                   <div className="mt-4">
                     <ComparisonSlider
@@ -202,7 +202,7 @@ function Field({ label, value }: { label: string; value: string }) {
       <dt className="font-heading text-xs font-bold uppercase tracking-[0.16em] text-gold-400">
         {label}
       </dt>
-      <dd className="text-sm leading-relaxed text-navy">{value}</dd>
+      <dd className="text-sm leading-relaxed text-ink">{value}</dd>
     </div>
   );
 }

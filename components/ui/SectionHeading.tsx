@@ -39,7 +39,7 @@ export function SectionHeading({
           <span
             className={cn(
               "mt-1 shrink-0",
-              tone === "onDark" ? "text-gold-400" : "text-navy",
+              tone === "onDark" ? "text-gold-400" : "text-ink",
             )}
             aria-hidden="true"
           >
@@ -48,8 +48,8 @@ export function SectionHeading({
         ) : null}
         <Tag
           className={cn(
-            "font-heading text-h2 font-extrabold tracking-tight",
-            tone === "onDark" ? "text-offwhite" : "text-navy",
+            "font-heading text-h2 font-extrabold tracking-tight capitalize",
+            tone === "onDark" ? "text-offwhite" : "text-ink",
           )}
         >
           {heading}

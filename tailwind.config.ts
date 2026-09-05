@@ -10,13 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         navy: "#0D182A",
+        ink: "#1E3A8A",
         gold: {
           300: "#F5D889",
           400: "#EFC868",
           500: "#D4AF37",
         },
         gray: "#656C74",
-        offwhite: "#FFFFFF",
+        offwhite: "#F7F1E3",
       },
       fontFamily: {
         heading: ["var(--font-heading)", "Montserrat", "sans-serif"],

@@ -10,7 +10,7 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHeader
-        title="Our projects"
+        title="Our Projects"
         image="/images/header-projects.png"
         imageAlt="Completed lobby with mixed floor and wall tiles"
         crumbs={[

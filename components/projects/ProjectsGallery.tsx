@@ -32,7 +32,7 @@ export function ProjectsGallery() {
   return (
     <Section className="bg-offwhite">
       <Reveal>
-        <SectionHeading eyebrow="Our work" heading="Selected projects" />
+        <SectionHeading eyebrow="Our work" heading="Selected Projects" />
 
         <div
           className="mt-10 flex flex-wrap gap-2"
@@ -48,10 +48,10 @@ export function ProjectsGallery() {
                 type="button"
                 aria-pressed={isActive}
                 className={cn(
-                  "relative min-h-11 cursor-pointer px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-200",
+                  "relative min-h-11 cursor-pointer px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ease-in-out",
                   isActive
                     ? "bg-gold-400 text-navy hover:bg-gold-300 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-navy"
-                    : "bg-white text-gray hover:text-navy",
+                    : "bg-white text-gray hover:text-ink",
                 )}
                 onClick={() => setFilter(item.id)}
               >

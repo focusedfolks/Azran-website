@@ -30,7 +30,7 @@ export function MissionValues() {
         <SectionHeading
           tone="onDark"
           eyebrow="How we work"
-          heading="Mission & values"
+          heading="Mission & Values"
         />
       </Reveal>
 
@@ -39,10 +39,10 @@ export function MissionValues() {
           <StaggerItem key={card.id}>
             <article className="h-full bg-offwhite p-7 shadow-subtle">
               <span className="text-gold-400">{valueIcons[card.id]}</span>
-              <h3 className="mt-5 font-heading text-xl font-bold text-navy">
+              <h3 className="mt-5 font-heading text-xl font-bold text-ink">
                 {card.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-navy">{card.body}</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink">{card.body}</p>
             </article>
           </StaggerItem>
         ))}

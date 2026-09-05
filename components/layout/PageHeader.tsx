@@ -62,7 +62,7 @@ export function PageHeader({
                   ) : (
                     <Link
                       href={crumb.href}
-                      className="transition-colors duration-200 hover:text-gold-300"
+                      className="transition-colors duration-300 ease-in-out hover:text-gold-300"
                     >
                       {crumb.label}
                     </Link>

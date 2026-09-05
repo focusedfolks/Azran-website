@@ -13,19 +13,19 @@
   }
 
   body {
-    @apply bg-offwhite text-navy font-body font-normal antialiased;
+    @apply bg-offwhite text-ink font-body font-normal antialiased;
   }
 
   h1,
   h2 {
-    @apply font-heading font-extrabold tracking-tight text-navy;
+    @apply font-heading font-extrabold tracking-tight text-ink capitalize;
   }
 
   h3,
   h4,
   h5,
   h6 {
-    @apply font-heading font-bold tracking-tight text-navy;
+    @apply font-heading font-bold tracking-tight text-ink capitalize;
   }
 
   :focus-visible {
@@ -39,7 +39,7 @@
   }
 
   .btn {
-    @apply inline-flex cursor-pointer items-center justify-center px-6 py-3 text-sm font-heading font-bold tracking-wide transition-all duration-200 ease-out rounded-sm;
+    @apply inline-flex cursor-pointer items-center justify-center px-6 py-3 text-sm font-heading font-bold tracking-wide transition-all duration-300 ease-in-out rounded-sm;
     @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
     min-height: 44px;
     touch-action: manipulation;
@@ -85,11 +85,11 @@
   }
 
   .form-label {
-    @apply mb-1.5 block text-sm font-medium text-navy;
+    @apply mb-1.5 block text-sm font-medium text-ink;
   }
 
   .form-control {
-    @apply w-full rounded-sm border border-navy/20 bg-white px-4 py-3 text-base text-navy transition-colors duration-200;
+    @apply w-full rounded-sm border border-navy/20 bg-white px-4 py-3 text-base text-ink transition-colors duration-300 ease-in-out;
     min-height: 44px;
   }
 

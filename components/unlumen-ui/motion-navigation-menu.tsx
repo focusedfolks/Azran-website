@@ -437,7 +437,7 @@ function MotionNavigationMenuItem({
 }
 
 const motionNavigationMenuTriggerStyle = cva(
-  "group inline-flex h-11 w-max items-center justify-center rounded-sm bg-transparent px-3 py-2 text-sm font-body font-medium tracking-wide text-gray outline-none transition-colors duration-200 hover:text-navy focus:text-navy disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
+  "group inline-flex h-11 w-max items-center justify-center rounded-sm bg-transparent px-3 py-2 text-sm font-body font-medium tracking-wide text-gray outline-none transition-colors duration-300 ease-in-out hover:text-ink focus:text-ink disabled:pointer-events-none disabled:opacity-50 data-[state=open]:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
 );
 
 function MotionNavigationMenuTrigger({
@@ -549,7 +549,7 @@ function MotionNavigationMenuContent({
           exit="exit"
           transition={context.spring}
           className={cn(
-            "absolute left-0 top-full z-50 mt-1.5 rounded-sm border border-navy/10 bg-white p-2 pr-2.5 text-navy shadow-subtle",
+            "absolute left-0 top-full z-50 mt-1.5 rounded-sm border border-navy/10 bg-white p-2 pr-2.5 text-ink shadow-subtle",
             className,
           )}
         >
@@ -662,7 +662,7 @@ function MotionNavigationMenuViewport({
         }}
         transition={context?.spring}
         className={cn(
-          "relative mt-1.5 overflow-hidden rounded-sm border border-navy/10 bg-white text-navy shadow-subtle",
+          "relative mt-1.5 overflow-hidden rounded-sm border border-navy/10 bg-white text-ink shadow-subtle",
           className,
         )}
       >
@@ -726,8 +726,8 @@ function MotionNavigationMenuLink({
         href={href}
         data-slot="navigation-menu-link"
         className={cn(
-          "flex flex-col gap-1 rounded-sm p-2 text-sm outline-none transition-colors duration-200",
-          "hover:text-navy focus:text-navy data-[active=true]:text-navy",
+          "flex flex-col gap-1 rounded-sm p-2 text-sm outline-none transition-colors duration-300 ease-in-out",
+          "hover:text-ink focus:text-ink data-[active=true]:text-ink",
           "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500",
           className,
         )}

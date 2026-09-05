@@ -10,7 +10,7 @@ export function WhyChooseUs() {
   return (
     <Section className="bg-offwhite">
       <Reveal>
-        <SectionHeading eyebrow="Why Azran" heading="Why choose us" />
+        <SectionHeading eyebrow="Why Azran" heading="Why Choose Us" />
       </Reveal>
 
       <Stagger className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -18,10 +18,10 @@ export function WhyChooseUs() {
           <StaggerItem key={item.id}>
             <article className="h-full border border-navy/10 bg-offwhite p-6 shadow-subtle">
               <span className="text-gold-400">{trustIcons[item.id]}</span>
-              <h3 className="mt-4 font-heading text-lg font-bold text-navy">
+              <h3 className="mt-4 font-heading text-lg font-bold text-ink">
                 {item.label}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-navy">
+              <p className="mt-2 text-sm leading-relaxed text-ink">
                 {item.description}
               </p>
             </article>

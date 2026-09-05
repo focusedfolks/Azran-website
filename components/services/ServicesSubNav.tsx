@@ -53,8 +53,8 @@ export function ServicesSubNav() {
               href={link.href}
               onClick={() => setActive(link.id)}
               className={cn(
-                "relative shrink-0 px-4 py-3.5 text-sm font-medium tracking-wide transition-colors duration-200",
-                isActive ? "text-navy" : "text-gray hover:text-navy",
+                "relative shrink-0 px-4 py-3.5 text-sm font-medium tracking-wide transition-colors duration-300 ease-in-out",
+                isActive ? "text-ink" : "text-gray hover:text-ink",
               )}
               aria-current={isActive ? "location" : undefined}
             >

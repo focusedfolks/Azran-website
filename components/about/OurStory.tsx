@@ -10,8 +10,8 @@ export function OurStory() {
     <Section className="bg-offwhite">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <SectionHeading eyebrow="Who we are" heading="Our story" />
-          <div className="mt-6 space-y-4 text-base font-normal leading-relaxed text-navy">
+          <SectionHeading eyebrow="Who we are" heading="Our Story" />
+          <div className="mt-6 space-y-4 text-base font-normal leading-relaxed text-ink">
             <p>
               Azran was founded to bring a higher standard of precision to floor
               tiling and finishing work in the UAE. Over 10+ years, the team has

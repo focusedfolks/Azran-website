@@ -13,7 +13,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        title="Our services"
+        title="Our Services"
         image="/images/header-services.png"
         imageAlt="Tiling and cleaning tools laid out on a drop cloth"
         crumbs={[

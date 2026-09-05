@@ -5,15 +5,15 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export function ContactInfo() {
   return (
     <div className="flex h-full flex-col border border-navy/10 bg-offwhite p-6 sm:p-8">
-      <SectionHeading eyebrow="Reach us" heading="Contact info" />
+      <SectionHeading eyebrow="Reach us" heading="Contact Info" />
 
       <ul className="mt-8 space-y-6">
         <li>
           <a
             href={SITE.contact.phoneHref}
-            className="group flex items-start gap-4 text-navy transition-colors duration-200 hover:text-gold-300"
+            className="group flex items-start gap-4 text-ink transition-colors duration-300 ease-in-out hover:text-gold-300"
           >
-            <span className="text-gold-400 transition-colors duration-200 group-hover:text-gold-300">{contactIcons.phone}</span>
+            <span className="text-gold-400 transition-colors duration-300 ease-in-out group-hover:text-gold-300">{contactIcons.phone}</span>
             <span>
               <span className="block font-heading text-xs font-bold uppercase tracking-[0.16em] text-gray">
                 Phone
@@ -29,9 +29,9 @@ export function ContactInfo() {
             href={SITE.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-start gap-4 text-navy transition-colors duration-200 hover:text-gold-300"
+            className="group flex items-start gap-4 text-ink transition-colors duration-300 ease-in-out hover:text-gold-300"
           >
-            <span className="flex h-6 w-6 items-center justify-center text-gold-400 transition-colors duration-200 group-hover:text-gold-300">
+            <span className="flex h-6 w-6 items-center justify-center text-gold-400 transition-colors duration-300 ease-in-out group-hover:text-gold-300">
               <WhatsAppGlyph />
             </span>
             <span>
@@ -47,9 +47,9 @@ export function ContactInfo() {
         <li>
           <a
             href={`mailto:${SITE.contact.email}`}
-            className="group flex items-start gap-4 text-navy transition-colors duration-200 hover:text-gold-300"
+            className="group flex items-start gap-4 text-ink transition-colors duration-300 ease-in-out hover:text-gold-300"
           >
-            <span className="text-gold-400 transition-colors duration-200 group-hover:text-gold-300">{contactIcons.email}</span>
+            <span className="text-gold-400 transition-colors duration-300 ease-in-out group-hover:text-gold-300">{contactIcons.email}</span>
             <span>
               <span className="block font-heading text-xs font-bold uppercase tracking-[0.16em] text-gray">
                 Email
@@ -81,8 +81,8 @@ export function ContactInfo() {
             <h3 className="font-heading text-xs font-bold uppercase tracking-[0.16em] text-gray">
               Business Hours
             </h3>
-            <p className="mt-2 text-sm text-navy">{SITE.hours.weekdays}</p>
-            <p className="mt-1 text-sm text-navy">{SITE.hours.sunday}</p>
+            <p className="mt-2 text-sm text-ink">{SITE.hours.weekdays}</p>
+            <p className="mt-1 text-sm text-ink">{SITE.hours.sunday}</p>
           </div>
         </div>
       </div>

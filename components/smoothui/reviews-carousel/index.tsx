@@ -77,13 +77,13 @@ function ReviewCard({
         <div className="absolute -top-1 -left-2 font-heading text-4xl leading-none text-gold-400">
           “
         </div>
-        <p className="relative font-body text-sm leading-relaxed text-navy sm:text-base">
+        <p className="relative font-body text-sm leading-relaxed text-ink sm:text-base">
           {review.body}
         </p>
       </blockquote>
       <figcaption className="mt-4 flex items-center gap-2 border-t border-navy/10 pt-4">
         <div className="flex flex-col">
-          <span className="font-heading text-xs font-bold text-navy">
+          <span className="font-heading text-xs font-bold text-ink">
             {review.author}
           </span>
           <span className="text-xs text-gray">{review.title}</span>
@@ -110,7 +110,7 @@ function NavigationButton({
     <button
       aria-label={direction === "prev" ? "Previous review" : "Next review"}
       className={cn(
-        "group relative z-0 flex h-11 w-11 items-center justify-center border border-navy/15 bg-white text-navy transition-colors duration-300 ease-out",
+        "group relative z-0 flex h-11 w-11 items-center justify-center border border-navy/15 bg-white text-ink transition-colors duration-300 ease-out",
         disabled
           ? "cursor-not-allowed opacity-30"
           : "cursor-pointer hover:border-navy hover:bg-navy hover:text-offwhite",

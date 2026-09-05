@@ -31,11 +31,11 @@ export function Accordion({ items }: AccordionProps) {
               aria-controls={panelId}
               onClick={() => setOpen(isOpen ? null : index)}
             >
-              <span className="font-heading text-sm font-bold text-navy sm:text-base">
+              <span className="font-heading text-sm font-bold text-ink sm:text-base">
                 {item.question}
               </span>
               <motion.span
-                className="shrink-0 text-navy"
+                className="shrink-0 text-ink"
                 animate={{ rotate: isOpen ? 180 : 0 }}
                 transition={{ duration: reduce ? 0 : 0.25, ease: [0, 0, 0.2, 1] }}
               >
@@ -54,7 +54,7 @@ export function Accordion({ items }: AccordionProps) {
                   transition={{ duration: reduce ? 0 : 0.3, ease: [0, 0, 0.2, 1] }}
                   className="overflow-hidden"
                 >
-                  <p className="pb-5 text-sm leading-relaxed text-navy">
+                  <p className="pb-5 text-sm leading-relaxed text-ink">
                     {item.answer}
                   </p>
                 </motion.div>

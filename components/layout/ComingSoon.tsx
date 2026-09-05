@@ -11,7 +11,7 @@ export function ComingSoon({ kicker }: ComingSoonProps) {
   return (
     <Section className="flex min-h-[50vh] items-center">
       <Reveal>
-        <SectionHeading as="h1" eyebrow={kicker} heading="Coming soon" />
+        <SectionHeading as="h1" eyebrow={kicker} heading="Coming Soon" />
         <p className="mt-6 max-w-xl text-base font-normal leading-relaxed text-gray sm:text-lg">
           This page is under construction. In the meantime, request a quote or
           reach us by phone or WhatsApp.

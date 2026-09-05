@@ -24,7 +24,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-offwhite/80 transition-colors duration-200 hover:text-gold-300"
+                  className="text-sm text-offwhite/80 transition-colors duration-300 ease-in-out hover:text-gold-300"
                 >
                   {link.label}
                 </Link>
@@ -42,7 +42,7 @@ export function Footer() {
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="text-sm text-offwhite/80 transition-colors duration-200 hover:text-gold-300"
+                  className="text-sm text-offwhite/80 transition-colors duration-300 ease-in-out hover:text-gold-300"
                 >
                   {link.label}
                 </Link>
@@ -59,7 +59,7 @@ export function Footer() {
             <li>
               <a
                 href={SITE.contact.phoneHref}
-                className="transition-colors duration-200 hover:text-gold-300"
+                className="transition-colors duration-300 ease-in-out hover:text-gold-300"
               >
                 {SITE.contact.phone}
               </a>
@@ -67,7 +67,7 @@ export function Footer() {
             <li>
               <a
                 href={`mailto:${SITE.contact.email}`}
-                className="transition-colors duration-200 hover:text-gold-300"
+                className="transition-colors duration-300 ease-in-out hover:text-gold-300"
               >
                 {SITE.contact.email}
               </a>

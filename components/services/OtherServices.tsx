@@ -20,9 +20,9 @@ export function OtherServices() {
         <Reveal>
           <SectionHeading
             eyebrow="Also available"
-            heading="Additional technical services"
+            heading="Additional Technical Services"
           >
-            <p className="mt-6 max-w-2xl text-base font-normal text-navy">
+            <p className="mt-6 max-w-2xl text-base font-normal text-ink">
               Ask us about these services when you contact us.
             </p>
           </SectionHeading>
@@ -36,7 +36,7 @@ export function OtherServices() {
               <StaggerItem key={service.slug}>
                 <article
                   id={service.anchor}
-                  className="group scroll-mt-36 h-full overflow-hidden border border-navy/10 bg-offwhite transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lg"
+                  className="group scroll-mt-36 h-full overflow-hidden border border-navy/10 bg-offwhite transition-[transform,box-shadow] duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
                 >
                   {photo ? (
                     <div className="relative aspect-[4/3] bg-navy">
@@ -50,13 +50,13 @@ export function OtherServices() {
                     </div>
                   ) : null}
                   <div className="p-4">
-                    <span className="text-navy transition-colors duration-[250ms] ease-out group-hover:text-gold-300">
+                    <span className="text-ink transition-colors duration-300 ease-in-out group-hover:text-gold-300">
                       {serviceIcons[service.slug]}
                     </span>
-                    <h3 className="mt-3 font-heading text-sm font-bold text-navy">
+                    <h3 className="mt-3 font-heading text-sm font-bold text-ink">
                       {asServiceHeading(service.title)}
                     </h3>
-                    <p className="mt-1.5 text-xs leading-relaxed text-navy">
+                    <p className="mt-1.5 text-xs leading-relaxed text-ink">
                       {service.description}
                     </p>
                   </div>

@@ -10,7 +10,7 @@ export function OurTeam() {
   return (
     <Section className="bg-navy">
       <Reveal>
-        <SectionHeading tone="onDark" eyebrow="People" heading="Our team" />
+        <SectionHeading tone="onDark" eyebrow="People" heading="Our Team" />
       </Reveal>
 
       <Reveal delay={0.08}>

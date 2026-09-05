@@ -15,7 +15,7 @@ export function ServiceOverview() {
   return (
     <Section className="bg-offwhite">
       <Reveal>
-        <SectionHeading eyebrow="Our Services" heading="Our core services" />
+        <SectionHeading eyebrow="Our Services" heading="Our Core Services" />
       </Reveal>
 
       <Stagger className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-5">
@@ -30,7 +30,7 @@ export function ServiceOverview() {
               <Link
                 href={`/services#${service.anchor}`}
                 className={cn(
-                  "group flex h-full cursor-pointer flex-col overflow-hidden border border-navy/10 bg-offwhite transition-[transform,box-shadow] duration-300 ease-out",
+                  "group flex h-full cursor-pointer flex-col overflow-hidden border border-navy/10 bg-offwhite transition-[transform,box-shadow] duration-300 ease-in-out",
                   service.featured
                     ? "border-l-4 border-l-gold-500 shadow-md hover:-translate-y-1.5 hover:shadow-lg"
                     : "shadow-subtle hover:-translate-y-1 hover:shadow-lg",
@@ -52,7 +52,7 @@ export function ServiceOverview() {
                           ? "(max-width: 768px) 100vw, 50vw"
                           : "(max-width: 768px) 100vw, 25vw"
                       }
-                      className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                      className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                     />
                   </div>
                 ) : null}
@@ -62,7 +62,7 @@ export function ServiceOverview() {
                   )}
                 >
                   <div className="flex items-start justify-between gap-3">
-                    <span className="text-navy">
+                    <span className="text-ink">
                       {serviceIcons[service.slug]}
                     </span>
                     {service.featured ? (
@@ -71,10 +71,10 @@ export function ServiceOverview() {
                       </span>
                     ) : null}
                   </div>
-                  <h3 className="mt-5 font-heading text-lg font-bold text-navy">
+                  <h3 className="mt-5 font-heading text-lg font-bold text-ink capitalize">
                     {asServiceHeading(service.title)}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-navy">
+                  <p className="mt-2 text-sm leading-relaxed text-ink">
                     {service.description}
                   </p>
                 </div>
